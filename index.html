@@ -1,66 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nazwa</title>
+	<title>Droga do gwiazd</title>
 	<link rel="icon" type="image/x-icon" href="icon_cow.png">
+	<link rel="stylesheet" href="style.css">
+	<!--FONT NAGŁÓWKI-->
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<style type="text/tailwindcss">
 	</style>
 </head>
 <body id="top">
+
 	<!---------- HEADER ------------->
-	<header id="header" class="relative bg-black bg-cover bg-top text-white flex items-center flex-col justify-center text-center h-screen" style="background-image: url('space-sunrise-2.jpg');">
-		<h1>Droga do gwiazd</h1>
-		<button><a href="#about">Dowiedz się więcej</a></button>
+	<header id="header" class="relative bg-black bg-cover bg-top bg-no-repeat bg-scroll text-white flex items-center flex-col justify-center text-center h-screen sm:h-screen md:h-screen lg:h-full lg:py-[26dvh]" style="background-image: url('space-sunrise-2.jpg');">
+		<h1 class="text-6xl md:text-8xl lg:text-8xl" id="nazwa">Droga <br> do <br> gwiazd</h1>
+		<button class="mt-10 bg-black py-4 px-3 hover:text-blue-400"><a href="#about">Dowiedz się więcej</a></button>
 	</header>
+
 	<!---------- NAVIGATION ---------->
-	<nav class="bg-black text-white  flex items-center justify-between px-6 py-4 sticky top-0 z-50 w-full">
-		<div id="name">
-			<a href="#top">Droga do gwiazd</a>
+	<nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
+		<div class="container flex items-center justify-between mx-auto">
+			<div id="nazwa" class="text-xl">
+				<a href="#top">Droga do gwiazd</a>
+			</div>
+			<button id="menu-btn" class="md:hidden text-white focus:outline-none hover:text-blue-400">
+				<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+				</svg>
+			</button>
+			<ul id="menu" class="hidden md:flex absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black md:bg-transparent flex-col md:flex-row items-center md:space-x-6 md:p-0 p-6 text-lg">
+				<li><a href="#about" class="block py-3 md:py-0 hover:text-blue-400">O nas</a></li>
+				<li><a href="#articles" class="block py-3 md:py-0 hover:text-blue-400">Artykuły</a></li>
+				<li><a href="#halloffame" class="block py-3 md:py-0 hover:text-blue-400">Galeria sław</a></li>
+				<li><a href="#quiz" class="block py-3 md:py-0 hover:text-blue-400">Quiz</a></li>
+				<li><a href="#info" class="block py-3 md:py-0 hover:text-blue-400">Informacje dodatkowe</a></li>
+			</ul>
 		</div>
-		<ul class="hidden md:flex space-x-6">
-			<li><a href="#about">O nas</a></li>
-			<li><a href="#articles">Artykuły</a></li>
-			<li><a href="#halloffame">Galeria sław</a></li>
-			<li><a href="#quiz">Quiz</a></li>
-			<li><a href="#info">Informacje dodatkowe</a></li>
-		</ul>
 	</nav>
+	
+	<script>
+		const menuBtn = document.getElementById('menu-btn');
+		const menu = document.getElementById('menu');
+	
+		menuBtn.addEventListener('click', () => {
+			menu.classList.toggle('hidden');
+			menu.classList.toggle('menu-open');
+		});
+	</script>
 	
 	<!---------- ABOUT ------------>
 	<section id="about" class="bg-black text-white px-6 py-4 h-screen">
-		<h2 class="text-center py-6">O nas</h2>
-		<p>Na "Drodze do gwiazd" dowiesz się wszystkich najciekawszych informacji o przeszłości, teraźniejszości, a może nawet przyszłości eksploracji kosmosu przez człowieka. Znajdziesz tu m.in informacje o ludziach, zwierzętach i rakietach, które opuściły atmosferę Ziemi. Na końcu czeka cię quiz, który sprawdzi twoją wiedzę (jeśli odważysz się go podjąć).<p>
-	</section>
-
-	<!---------- ARTYKUŁY ------------>
-	<section id="articles" class="h-screen ">
-		<h2 class="text-center py-6">Może Cię zainteresować...</h2>
-		<div class="flex items-center justify-between px-6">
-			<!--------- OŚ CZASU ---------->
-			<div>
-				<h3>Oś czasu</h3>
-				<p>Historia odkryć i lotów kosmicznych od początków XX wieku aż do dnia dzisiejszego</p>
-			</div>
-			<!--------- OSIĄGNIĘCIA ---------->
-			<div>
-				<h3>Osiągnięcia technologiczne</h3>
-				<p>Dowiedz się ciekawostek o rakietach, łazikach i sztucznych satelitach</p>
-			</div>
-			<!--------- CO/KTO ----------->
-			<div>
-				<h3>Zwierzęta i ludzie poza Ziemią</h3>
-				<p>Przeczytaj, kto w przeszłości zawitał w kosmosie oraz kto przebywa tam aktualnie</p>
-			</div>
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14">
+		<h2 class="text-center py-6 text-4xl">O nas</h2>
+		<p class="mt-6 text-justify text-lg md:text-center lg:text-center">Na "Drodze do gwiazd" czeka na Ciebie fascynująca podróż przez historię ludzkich marzeń o podboju kosmosu. Zanurzysz się w opowieści o pierwszych, niepewnych krokach poza Ziemię, śmiałych misjach, które na zawsze zmieniły bieg nauki, oraz ambitnych planach na przyszłość, które mogą pewnego dnia zaprowadzić nas na inne planety. <br class="mb-3">
+		Poznasz bohaterów tej niezwykłej przygody - zarówno ludzi, którzy ryzykowali życie, by sięgnąć gwiazd, jak i zwierzęta, które jako pierwsze przekroczyły granicę naszej atmosfery. Dowiesz się, jak powstawały rakiety zdolne wynieść nas w kosmos i jakie technologie umożliwiły eksplorację Księżyca, Marsa i nie tylko. <br class="mb-3">
+		A na koniec sprawdzisz swoją wiedzę w specjalnym quizie - jeśli tylko odważysz się go podjąć!<p>
 		</div>
 	</section>
 
+	<!---------- ARTYKUŁY ------------>
+	<section id="articles" class="h-full md:h-screen lg:h-screen px-6 py-4">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14">
+		<h2 class="py-6 text-4xl">Może Cię zainteresować...</h2>
+		</div>
+		<div class="container grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 mx-auto px-4 sm:px-6 lg:px-8">
+		
+			<!-- OŚ CZASU -->
+			 <div><img class="w-full h-auto object-cover" src="square-placeholder.jpg" alt="placeholder 900x900px">
+			<div class="bg-white p-4 border-2 border-black min-h-[200px] flex flex-col">
+				<h3 class="teko-headings-small text-2xl">Oś czasu</h3>
+				<p class="mt-4">Historia odkryć i lotów kosmicznych od początków XX wieku aż po dzień dzisiejszy.</p>
+			</div>
+			</div>
+		
+			<!-- OSIĄGNIĘCIA -->
+			 <div><img class="w-full h-auto object-cover" src="square-placeholder.jpg" alt="placeholder 900x900px">
+			<div class="bg-white p-4 border-2 border-black min-h-[200px] flex flex-col">
+				<h3 class="teko-headings-small text-2xl">Osiągnięcia technologiczne</h3>
+				<p class="mt-4">Dowiedz się ciekawostek o rakietach, łazikach i sztucznych satelitach.</p>
+			</div>
+			</div>
+		
+			<!-- CO/KTO -->
+			 <div><img class="w-full h-auto object-cover" src="square-placeholder.jpg" alt="placeholder 900x900px">
+			<div class="bg-white p-4 border-2 border-black min-h-[200px] flex flex-col">
+				<h3 class="teko-headings-small text-2xl">Zwierzęta i ludzie poza Ziemią</h3>
+				<p class="mt-4">Przeczytaj, kto w przeszłości zawitał w kosmosie oraz kto przebywa tam aktualnie.</p>
+			</div>
+		</div>
+		</div>
+		
+	</section>
+
 	<!---------- GALERIA SŁAW ----------->	
-	<section id="halloffame" class="bg-black text-white h-screen">
+	<section id="halloffame" class="bg-black text-white h-screen px-6 py-4">
 		<div>
-			<h2>Galeria sław</h2>
+			<h2 class="py-6 text-4xl">Galeria sław</h2>
 		</div>
 		<div>
 			
@@ -68,13 +106,13 @@
 	</section>
 	
 	<!---------- QUIZ ----------->
-	<section id="quiz" class="h-screen">
-		<h2>Quiz</h2>
+	<section id="quiz" class="h-screen px-6 py-4">
+		<h2 class="py-6 text-4xl">Quiz</h2>
 	</section>
 
 	<!---------- STOPKA ---------->
-	<footer id="info" class="text-white bg-cover bg-bottom min-h-[200px]" style="background-image: url('spacesunset.jpg');">
-		<h2>Informacje dodatkowe</h2>
+	<footer id="info" class="text-white bg-cover bg-bottom min-h-[200px] px-6 py-4" style="background-image: url('spacesunset.jpg');">
+		<h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
         <p>Autorki:</p>
         <div class="flex items-center justify-between px-6 py-4 w-full">
         	<ul>

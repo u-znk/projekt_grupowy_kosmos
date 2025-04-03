@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "DistantGalaxy";
+    src: url("DistantGalaxy/SfDistantGalaxy-0l3d.ttf");
+}
+@media (max-width: 768px) {
+    .menu-open {
+        background: linear-gradient(to top, #1e293b, #000);
+    }
+}
+#nazwa{
+    font-family: "DistantGalaxy";
+}
+h2, .teko-headings {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.teko-headings-small {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}
