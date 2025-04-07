@@ -1,9 +1,10 @@
 Kognitywistyka Komunikacji I
+
 Droga do gwiazd - Edukacyjna Strona o Eksploracji Kosmosu
 
 ༻✦༺ 　༻✧༺　༻✦༺
 
-Opis projektu
+Opis projektu: 
 "Droga do gwiazd" to interaktywna strona edukacyjna poświęcona osiągnięciom w eksploracji kosmosu. Projekt przedstawia historię badań kosmicznych, poczynając od początku XX wieku, aż do współczesności. Strona zawiera informacje na temat lotów kosmicznych, kosmonautów, sond kosmicznych, a także zwierząt, które zostały wysłane w przestrzeń kosmiczną.
 Naszym celem jest stworzenie przestrzeni edukacyjnej, która w sposób przystępny i interesujący zaprezentuje najważniejsze momenty w historii kosmonautyki oraz osiągnięcia ludzkości w badaniu wszechświata.
 
