@@ -2,6 +2,8 @@ Kognitywistyka Komunikacji I
 
 Droga do gwiazd - Edukacyjna Strona o Eksploracji Kosmosu
 
+Link do strony: https://u-znk.github.io/projekt_grupowy_kosmos/
+
 ༻✦༺ 　༻✧༺　༻✦༺
 
 Opis projektu: 
