@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nazwa podstrony</title>
+    <title>Zwierzęta i ludzie poza Ziemią</title>
     <link rel="stylesheet" href="style.css">
     <!--FONT NAGŁÓWKI-->
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="amongus.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
     </style>
@@ -40,23 +41,32 @@
 
             document.getElementById('imie').innerHTML = dane[0] + " ";
             document.getElementById('nazwisko').innerHTML = dane[1] + " ";
-            document.getElementById('data_ur').innerHTML = '<svg class="w-6 h-6 mx-2" fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M413.342,120.063l27.982,6.995l-31.704-19.021c7.64,0.581,24.425,0.44,35.109-10.246 c14.189-14.187,9.786-39.138,9.786-39.138s-24.463-4.893-39.14,9.783c-12.056,12.057-10.908,30.705-10.114,36.984l-88.707-53.226 C313.796,22.997,283.988,0,247.593,0c-36.191,0-65.874,22.74-68.914,51.704c-0.165,1.053-0.104,9.295,0.198,11.441 c3.494,31.607,26.468,59.616,48.756,86.772c7.549,9.197,15.177,18.497,22.008,27.871c-25.121-4.865-55.331-4.431-86.754,2.449 C88.231,196.583,34.998,243.12,43.99,284.179c7.763,35.462,59.406,55.238,121.438,49.441v59.155c-4.239,3.8-6.919,9.3-6.919,15.44 s2.682,11.64,6.919,15.44V512h83.027l-55.351-27.676v-60.668c4.239-3.8,6.919-9.3,6.919-15.44s-2.682-11.64-6.919-15.44v-63.351 c0.779-0.162,1.56-0.324,2.34-0.494c66.88-14.643,116.556-53.516,119.719-90.973c0.138-0.97,0.235-1.955,0.235-2.965 c0-43.581-29.58-79.617-55.677-111.414c-2.88-3.508-5.734-6.988-8.519-10.436c20.315-0.854,38.303-8.885,50.281-21.045 l100.334,25.084c-14.703,24.748-57.359,100.103-57.359,141.336c0,34.391,27.878,62.27,62.27,62.27 c34.391,0,62.27-27.879,62.27-62.27C468.999,218.776,429.371,147.336,413.342,120.063z M261.431,68.245 c-5.733,0-10.378-4.645-10.378-10.378s4.645-10.378,10.378-10.378c5.732,0,10.378,4.645,10.378,10.378 S267.161,68.245,261.431,68.245z"></path> </g> </g> </g></svg>'+dane[2] + " ";
+            document.getElementById('data_ur').innerHTML ='<svg class="w-6 h-6 mx-2" fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M413.342,120.063l27.982,6.995l-31.704-19.021c7.64,0.581,24.425,0.44,35.109-10.246 c14.189-14.187,9.786-39.138,9.786-39.138s-24.463-4.893-39.14,9.783c-12.056,12.057-10.908,30.705-10.114,36.984l-88.707-53.226 C313.796,22.997,283.988,0,247.593,0c-36.191,0-65.874,22.74-68.914,51.704c-0.165,1.053-0.104,9.295,0.198,11.441 c3.494,31.607,26.468,59.616,48.756,86.772c7.549,9.197,15.177,18.497,22.008,27.871c-25.121-4.865-55.331-4.431-86.754,2.449 C88.231,196.583,34.998,243.12,43.99,284.179c7.763,35.462,59.406,55.238,121.438,49.441v59.155c-4.239,3.8-6.919,9.3-6.919,15.44 s2.682,11.64,6.919,15.44V512h83.027l-55.351-27.676v-60.668c4.239-3.8,6.919-9.3,6.919-15.44s-2.682-11.64-6.919-15.44v-63.351 c0.779-0.162,1.56-0.324,2.34-0.494c66.88-14.643,116.556-53.516,119.719-90.973c0.138-0.97,0.235-1.955,0.235-2.965 c0-43.581-29.58-79.617-55.677-111.414c-2.88-3.508-5.734-6.988-8.519-10.436c20.315-0.854,38.303-8.885,50.281-21.045 l100.334,25.084c-14.703,24.748-57.359,100.103-57.359,141.336c0,34.391,27.878,62.27,62.27,62.27 c34.391,0,62.27-27.879,62.27-62.27C468.999,218.776,429.371,147.336,413.342,120.063z M261.431,68.245 c-5.733,0-10.378-4.645-10.378-10.378s4.645-10.378,10.378-10.378c5.732,0,10.378,4.645,10.378,10.378 S267.161,68.245,261.431,68.245z"></path> </g> </g> </g></svg>' + dane[2] + " ";
             if(dane[3].length > 0){
-                document.getElementById('data_sm').innerHTML = '<svg class="h-6 w-6 mx-2" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <rect x="61.046" y="445.046" class="st0" width="389.908" height="66.954"></rect> <path class="st0" d="M168.453,191.47c7.362,0,12.092-4.339,12.092-11.17c0-6.7-4.73-11.031-12.092-11.031h-15.762 c-0.523,0-0.784,0.262-0.784,0.784v20.631c0,0.523,0.261,0.785,0.784,0.785H168.453z"></path> <path class="st0" d="M353.861,193.308c8.146,0,13.007-4.731,13.007-11.954s-4.861-12.085-13.007-12.085h-14.716 c-0.523,0-0.785,0.262-0.785,0.784v22.47c0,0.523,0.262,0.784,0.785,0.784H353.861z"></path> <path class="st0" d="M402.907,417.477l40.17-303.262L358.007,0H150.054L64.985,114.215l40.169,303.262H402.907z M319.046,153.9 c0-0.792,0.523-1.315,1.315-1.315h34.677c19.446,0,31.138,11.692,31.138,28.77c0,16.815-11.823,28.638-31.138,28.638h-15.892 c-0.523,0-0.785,0.262-0.785,0.785v29.824c0,0.792-0.531,1.315-1.315,1.315h-16.685c-0.792,0-1.315-0.523-1.315-1.315V153.9z M284.361,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638c0.784,0,1.315,0.523,1.315,1.315v15.762 c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M248.615,153.9 c0-0.792,0.523-1.315,1.315-1.315h16.685c0.785,0,1.315,0.523,1.315,1.315v86.701c0,0.792-0.53,1.315-1.315,1.315H249.93 c-0.792,0-1.315-0.523-1.315-1.315V153.9z M213.93,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638 c0.784,0,1.315,0.523,1.315,1.315v15.762c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M132.592,153.9c0-0.792,0.523-1.315,1.316-1.315h35.6c18.262,0,30.346,11.431,30.346,27.716c0,11.431-6.046,20.5-15.892,24.83 l17.6,35.208c0.392,0.792,0,1.577-0.915,1.577h-18.662c-1.177,0-1.569-0.392-1.969-1.315l-15.369-32.708h-11.954 c-0.523,0-0.784,0.262-0.784,0.785v31.924c0,0.792-0.531,1.315-1.316,1.315h-16.684c-0.792,0-1.316-0.523-1.316-1.315V153.9z"></path> </g> </g></svg>'+dane[3] + " ";
+                document.getElementById('data_sm').innerHTML ='<svg class="h-6 w-6 mx-2" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <rect x="61.046" y="445.046" class="st0" width="389.908" height="66.954"></rect> <path class="st0" d="M168.453,191.47c7.362,0,12.092-4.339,12.092-11.17c0-6.7-4.73-11.031-12.092-11.031h-15.762 c-0.523,0-0.784,0.262-0.784,0.784v20.631c0,0.523,0.261,0.785,0.784,0.785H168.453z"></path> <path class="st0" d="M353.861,193.308c8.146,0,13.007-4.731,13.007-11.954s-4.861-12.085-13.007-12.085h-14.716 c-0.523,0-0.785,0.262-0.785,0.784v22.47c0,0.523,0.262,0.784,0.785,0.784H353.861z"></path> <path class="st0" d="M402.907,417.477l40.17-303.262L358.007,0H150.054L64.985,114.215l40.169,303.262H402.907z M319.046,153.9 c0-0.792,0.523-1.315,1.315-1.315h34.677c19.446,0,31.138,11.692,31.138,28.77c0,16.815-11.823,28.638-31.138,28.638h-15.892 c-0.523,0-0.785,0.262-0.785,0.785v29.824c0,0.792-0.531,1.315-1.315,1.315h-16.685c-0.792,0-1.315-0.523-1.315-1.315V153.9z M284.361,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638c0.784,0,1.315,0.523,1.315,1.315v15.762 c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M248.615,153.9 c0-0.792,0.523-1.315,1.315-1.315h16.685c0.785,0,1.315,0.523,1.315,1.315v86.701c0,0.792-0.53,1.315-1.315,1.315H249.93 c-0.792,0-1.315-0.523-1.315-1.315V153.9z M213.93,224.839c0-0.792,0.523-1.315,1.308-1.315h15.638 c0.784,0,1.315,0.523,1.315,1.315v15.762c0,0.792-0.531,1.315-1.315,1.315h-15.638c-0.785,0-1.308-0.523-1.308-1.315V224.839z M132.592,153.9c0-0.792,0.523-1.315,1.316-1.315h35.6c18.262,0,30.346,11.431,30.346,27.716c0,11.431-6.046,20.5-15.892,24.83 l17.6,35.208c0.392,0.792,0,1.577-0.915,1.577h-18.662c-1.177,0-1.569-0.392-1.969-1.315l-15.369-32.708h-11.954 c-0.523,0-0.784,0.262-0.784,0.785v31.924c0,0.792-0.531,1.315-1.316,1.315h-16.684c-0.792,0-1.316-0.523-1.316-1.315V153.9z"></path> </g> </g></svg>' + dane[3] + " ";
             }
             else{
                 document.getElementById('data_sm').innerHTML = "";
             }
             document.getElementById('opis').innerHTML = dane[4] + " ";
             document.getElementById('zdjecie').innerHTML = dane[5] + " ";
+
+        }
+
+        function wyswietlOsobeTel(){
+            const leftDiv = document.getElementById("left");
+            if (window.innerWidth < 1024) { // tylko na telefonach/tabletach
+                leftDiv.classList.remove("hidden");
+                leftDiv.classList.add("flex");
+            }
         }
         //------------- TABLICA ZWIERZĘTA ------------------
         const zwierzeta = {
-            "Zwierze1": ["Nazwa1", "Gatunek1", "opis1","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"],
-            "Zwierze2": ["Nazwa2", "Gatunek2", "opis2","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"],
-            "Zwierze3": ["Nazwa3", "Gatunek3", "opis3","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"],
-            "Zwierze4": ["Nazwa4", "Gatunek4", "opis4","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"]
-        };
+            "Zwierze1": ["Nazwa1", "Gatunek1", "opis1","<img class='object-cover w-full h-full' src='laika.jpg'>"],
+            "Zwierze2": ["Nazwa2", "Gatunek2", "opis2","<img class='object-cover w-full h-full' src='laika.jpg'>"],
+            "Zwierze3": ["Nazwa3", "Gatunek3", "opis3","<img class='object-cover w-full h-full' src='laika.jpg'>"],
+            "Zwierze4": ["Nazwa4", "Gatunek4", "opis4","<img class='object-cover w-full h-full' src='laika.jpg'>"]
+        }
         //-------------- FUNKCJA ZWIERZĘTA -----------------
         function wyswietlZwierze(nazwa_zwierzecia) {
             let dane;
@@ -81,17 +91,31 @@
             document.getElementById('gatunek_zwierzecia').innerHTML = dane[1] + " ";
             document.getElementById('opis_zwierzecia').innerHTML = dane[2] + " ";
             document.getElementById('zdjecie_zwierzecia').innerHTML = dane[3] + " ";
+
         }
+
+        function wyswietlZwierzeTel(){
+            const leftDiv = document.getElementById("left");
+            if (window.innerWidth < 1024) { // tylko na telefonach/tabletach
+                leftDiv.classList.remove("hidden");
+                leftDiv.classList.add("flex");
+            }
+        }
+
         //--------------- TREŚĆ STRONY LUDZIE -------------------
         function ludzie() {
-            document.getElementById('zmiana').innerHTML = "<svg class='w-6 h-6 mx-2' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='#ffffff'><g id='SVGRepo_bgCarrier' stroke-width='0'></g><g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g><g id='SVGRepo_iconCarrier'><path fill-rule='evenodd' clip-rule='evenodd' d='M12.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 0 1 0-1.414Z' fill='#000000'></path><path fill-rule='evenodd' clip-rule='evenodd' d='M6.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L9.586 12 6.293 8.707a1 1 0 0 1 0-1.414Z' fill='#000000'></path></g></svg> Ludzie";
-
+            //----------------- H2 ------------------
+            document.getElementById('zmiana').innerHTML ='<span class="inline align-middle"><b>LUDZIE</b></span>';
+            //----------------- SVG POD H2 ---------------
+            document.getElementById('svg').innerHTML = '<img src="svg_astronaut.png" class="h-[50px]">';
+            //----------------- MAIN ----------------
             document.getElementById('main').innerHTML = `
-                <div id="left" class="lg:w-3/5 flex">
-                    <div class="w-1/2 h-full flex items-center justify-center border-r-2 border-white">
-                        <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white"></div>
+                <div id="left" class="hidden lg:flex lg:w-3/5 w-full flex-col lg:flex-row items-center justify-center">
+                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center  mb-8">
+                        <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 hover:scale-125">
+                        </div>
                     </div>
-                    <div class="w-1/2 flex items-center justify-center">
+                    <div class="lg:w-1/2 w-full flex items-center justify-center">
                         <div class="w-80 h-80 ">
                             <hr class="border-2 border-white w-full">
                             <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
@@ -107,92 +131,411 @@
                         </div>
                     </div>
                 </div>
-                <div id="right" class="lg:w-2/5 flex flex-wrap items-center justify-center lg:border-l-2 lg:border-white">
-                    <div class="text-center">
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('astronauta.jpg');" onclick="wyswietlOsobe('Osoba2')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba3')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba4')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba2')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba3')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba4')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba2')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba3')"></button>
-                        <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Osoba4')"></button>
-                    </div>
+                <div id="right" class="lg:w-2/5 w-full h-full flex flex-wrap items-center justify-center ">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Neil Armstrong</b>
+                                </span>
+                            </button>
+                        </a>
                 </div>
             `;
 
             wyswietlOsobe('Neil_Armstrong');
         }
-        //--------------- TREŚĆ STRONY ZWIERZĘTA ------------------
         function zwierze() {
-            document.getElementById('zmiana').innerHTML = "<svg class='w-6 h-6 mx-2' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='#ffffff'><g id='SVGRepo_bgCarrier' stroke-width='0'></g><g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g><g id='SVGRepo_iconCarrier'><path fill-rule='evenodd' clip-rule='evenodd' d='M12.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 0 1 0-1.414Z' fill='#000000'></path><path fill-rule='evenodd' clip-rule='evenodd' d='M6.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L9.586 12 6.293 8.707a1 1 0 0 1 0-1.414Z' fill='#000000'></path></g></svg> Zwierzęta";
-
+            document.getElementById('zmiana').innerHTML = '<span class="inline align-middle"><b>ZWIERZĘTA</b></span>';
+            document.getElementById('svg').innerHTML = '<img src="svg_dog_astronaut.png" class="h-[50px]">';
             document.getElementById('main').innerHTML = `
-                <div id="left" class="w-3/5 flex">
-                    <div class="w-1/2 h-full flex items-center justify-center border-r-2 border-white">
-                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white"></div>
+                <div id="left" class="hidden lg:flex lg:w-3/5 w-full flex-col lg:flex-row items-center justify-center">
+                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:border-r-2 border-white mb-8">
+                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 hover:scale-125"></div>
                     </div>
-                    <div class="w-1/2 flex items-center justify-center">
-                        <div class="w-80 h-80">
+                    <div class="lg:w-1/2 w-full flex items-center justify-center">
+                        <div class="w-80 h-80 ">
                             <hr class="border-2 border-white w-full">
-                            <div id="nazwa">
-                                <div class="justify-center flex items-center w-full my-2 text-3xl flex-wrap pr-2 max-w-full break-words" id="nazwa_zwierzecia"></div>
+                            <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
+                                <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
                             </div>
                             <hr class="border-2 border-white w-full">
                             <div class="justify-center flex items-center w-full">
-                                <div class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></div>
+                                <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
                             </div>
-                            <div class="text-justify" id="opis_zwierzecia"></div>
+                            <p class="text-justify my-4" id="opis_zwierzecia"></p>
                         </div>
                     </div>
                 </div>
-                <div id="right" class="lg:w-2/5 flex flex-wrap items-center justify-center lg:border-l-2 lg:border-white">
-                    <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlZwierze('Zwierze1')"></button>
-                    <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlZwierze('Zwierze2')"></button>
-                    <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlZwierze('Zwierze3')"></button>
-                    <button class="w-[100px] h-[100px] bg-cover m-4 rounded-full" style="background-image: url('czlowiek.jpg');" onclick="wyswietlZwierze('Zwierze4')"></button>
+                <div id="right" class="lg:w-2/5 w-full h-full flex flex-wrap items-center justify-center lg:border-l-2 lg:border-white">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                                <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
+                                <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
+                                <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
+                                <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
+                                    <b>Laika</b>
+                                </span>
+                            </button>
+                        </a>
                 </div>
             `;
 
             wyswietlZwierze('Zwierze1');
         }
-        //-------------- URUCHOMIA FUNCKJE RAZEM Z ZAŁADOWANIEM STRONY ------------------
-        window.onload = function() {
+         window.onload = function() {
             ludzie();
         };
     </script>
 </head>
-<body>
+<body class="overflow-x-hidden ">
     <!---------- NAVIGATION ---------->
-    <nav class="bg-black text-white  flex items-center justify-between px-6 py-4 sticky top-0 z-50 w-full">
-        <a href="index.html" class="flex items-center">Wróć na <svg class="w-6 h-6 mx-2 text-white" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <polygon fill="currentColor" points="154.219,205.188 166.219,335.031 110.922,405.563 96.406,296.563 "></polygon> <polygon fill="currentColor" points="357.781,205.188 345.766,335.031 401.063,405.563 415.594,296.563 "></polygon> <path fill="currentColor" d="M323.813,62.219C305.125,23.328,275.656,0,256,0s-49.125,23.344-67.813,62.219H323.813z"></path> <path fill="currentColor" d="M331.328,80.469H180.672c-6.641,19.156-10.594,41.094-10.047,65.188 c1.609,69.063,18.047,190.984,18.047,190.984l122.641-0.016l12,0.016c0,0,16.453-121.938,18.031-190.984 C341.922,121.563,337.969,99.609,331.328,80.469z M256,231.031c-23.578,0-42.688-19.094-42.688-42.672s19.125-42.672,42.688-42.672 s42.672,19.094,42.656,42.672C298.672,211.938,279.563,231.031,256,231.031z"></path> <path fill="currentColor" d="M429.516,512c-6.109-17.594-22.859-30.219-42.531-30.219c-6.297,0-12.297,1.281-17.766,3.625 c-1.875-20.578-19.188-36.688-40.25-36.688c-3.047,0-6,0.328-8.844,0.969c0.031-0.563,0.031-1.125,0.031-1.688 c0-15.531-12.594-28.125-28.125-28.125c-4.031,0-7.875,0.844-11.344,2.375c-9.734-17.219-12.563-62.156-12.563-62.156h-25.5 c0,0-3.266,49.344-14.813,65.688c-2.688-1.094-5.656-1.688-8.75-1.688c-13.016,0-23.563,10.547-23.563,23.563 c0,0.984,0.063,1.953,0.188,2.906c-3.719-1.203-3.281-1.844-7.406-1.844c-16.484,0-30.531,10.406-35.938,25 c-6.047-2.516-12.672-3.906-19.625-3.906c-25.156,0-46.063,18.219-50.234,42.188H429.516z"></path> </g> </g></svg><p class=" text-xl" id="nazwa">Droga do gwiazd</p></a>   
-    </nav>
-    <!---------- HEADER ------------->
-    <header id="header" class="relative bg-black bg-cover bg-top text-white flex items-center flex-col justify-center text-center h-screen" style="background-image: url('space-sunrise-2.jpg');">
-        <h1 class="text-6xl md:text-8xl lg:text-8xl" id="nazwa">Nazwa <br> podstrony</h1>
-        <p>Opis podstrony</p>
-    </header>
-    <!--------- NAV WEWNĘTRZNA ----------->
-    <section id="nav2" class="bg-black text-white flex px-6 py-4 w-full">
-        <a href="index.html">Strona główna</a> <svg class="w-6 h-6 mx-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 0 1 0-1.414Z" fill="#000000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L9.586 12 6.293 8.707a1 1 0 0 1 0-1.414Z" fill="#000000"></path></g></svg> <a href="podstrona1.html">Nazwa podstrony</a><div id="zmiana" class="flex items-center"></div>
-    </section>
-    <section id="tresc" class="bg-black text-white">
-    <!--------- PRZYCISKI ------------>
-        <div id="buttons" class="w-full px-6 py-4 text-center">
-            <button class="border border-white rounded px-2" onclick="ludzie()">Ludzie</button>
-            <button class="border border-white rounded px-2" onclick="zwierze()">Zwierzęta</button>
+    <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
+        <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
+    
+            <!-- Lewa strona: Logo -->
+            <div>
+                <a href="index.html" class="flex items-center text-white lg:text-base text-xs">
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Wróć na
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2 text-white" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <polygon fill="currentColor" points="154.219,205.188 166.219,335.031 110.922,405.563 96.406,296.563 "></polygon> <polygon fill="currentColor" points="357.781,205.188 345.766,335.031 401.063,405.563 415.594,296.563 "></polygon> <path fill="currentColor" d="M323.813,62.219C305.125,23.328,275.656,0,256,0s-49.125,23.344-67.813,62.219H323.813z"></path> <path fill="currentColor" d="M331.328,80.469H180.672c-6.641,19.156-10.594,41.094-10.047,65.188 c1.609,69.063,18.047,190.984,18.047,190.984l122.641-0.016l12,0.016c0,0,16.453-121.938,18.031-190.984 C341.922,121.563,337.969,99.609,331.328,80.469z M256,231.031c-23.578,0-42.688-19.094-42.688-42.672s19.125-42.672,42.688-42.672 s42.672,19.094,42.656,42.672C298.672,211.938,279.563,231.031,256,231.031z"></path> <path fill="currentColor" d="M429.516,512c-6.109-17.594-22.859-30.219-42.531-30.219c-6.297,0-12.297,1.281-17.766,3.625 c-1.875-20.578-19.188-36.688-40.25-36.688c-3.047,0-6,0.328-8.844,0.969c0.031-0.563,0.031-1.125,0.031-1.688 c0-15.531-12.594-28.125-28.125-28.125c-4.031,0-7.875,0.844-11.344,2.375c-9.734-17.219-12.563-62.156-12.563-62.156h-25.5 c0,0-3.266,49.344-14.813,65.688c-2.688-1.094-5.656-1.688-8.75-1.688c-13.016,0-23.563,10.547-23.563,23.563 c0,0.984,0.063,1.953,0.188,2.906c-3.719-1.203-3.281-1.844-7.406-1.844c-16.484,0-30.531,10.406-35.938,25 c-6.047-2.516-12.672-3.906-19.625-3.906c-25.156,0-46.063,18.219-50.234,42.188H429.516z"></path> </g> </g></svg>
+                    <span class="inline-block lg:text-xl text-xs" id="nazwa">Droga do gwiazd</span>
+                </a>
+            </div>
+
+            <!-- Hamburger - widoczny tylko na małych ekranach -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+
+            <!-- Menu na dużych ekranach -->
+            <ul id="menu" class="hidden md:flex items-center space-x-6 text-lg">
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button onclick="ludzie()">Ludzie</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button onclick="zwierze()">Zwierzęta</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <a href="#info">Informacje dodatkowe</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <!--------- SEKCJA GŁÓWNA ---------->
-        <div id="main" class="w-full flex flex-wrap py-20">
+
+        <!-- Menu mobilne (ukryte domyślnie, pokazuje się po kliknięciu hamburgera) -->
+        <ul id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-4 text-lg">
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <a href="#nav2">
+                        <button onclick="ludzie()">
+                            Ludzie
+                        </button>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <a href="#nav2">    
+                        <button onclick="zwierze()">
+                            Zwierzęta
+                        </button>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                    <a href="#info">Informacje dodatkowe</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!---------- HEADER ------------->
+    <section class="relative bg-black bg-cover bg-top bg-no-repeat bg-scroll text-white flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('astronaut.jpg');">
+        <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6">
+            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words">Odkrywcy <br>kosmosu</h1>
+        </div>
+        <!--------- PRZYCISKI ------------>
+        <div class="w-full flex justify-center">
+            <div id="buttons" class="w-full px-2 lg:px-6 pt-4 pb-[40px] lg:pb-[130px] text-center flex flex-wrap lg:pt-10">
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-8 lg:mb-0">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="ludzie()">
+                                Ludzie
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 mb-8 lg:mb-0">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
+                                Zwierzęta
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
+    </section>
+    <!--------- NAV WEWNĘTRZNA ----------->
+    <section id="nav2" class="text-white bg-black flex px-6 pb-4 pt-8 w-full text-6xl">
+        <div id="nazwa" class="w-full py-8">
+            <div class="flex-grow border-t border-white"></div>
+            <h2 id="zmiana" class="text-center pt-12 pb-4"></h2>
+            <div class="flex items-center space-x-8">
+                <div class="flex-grow border-t border-white"></div>
+                <div id="svg"></div>
+                <div class="flex-grow border-t border-white"></div>
+            </div>
+        </div>
+    </section>
+    <!--------- SEKCJA GŁÓWNA ---------->
+    <section id="tresc" class="bg-black text-white">
+        <div id="main" class="w-full flex flex-wrap py-10 lg:pb-20">
         </div>
     </section>
     <!---------- STOPKA ---------->
-    <footer id="info" class="text-white bg-cover bg-bottom h-[300px]" style="background-image: url('spacesunset.jpg');">
-        <h2>Informacje dodatkowe</h2>
+    <footer id="info" class="text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('moon.jpg');">
+        <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
         <p>Autorki:</p>
         <div class="flex items-center justify-between px-6 py-4 w-full">
             <ul>
@@ -206,6 +549,7 @@
                 <ul>
                     <li>Zdjęcia:</li>
                     <li>Informacje:</li>
+                    <li>Ikony: <a href="https://www.flaticon.com/free-icons/astronaut" title="astronaut icons">Astronaut icons created by Freepik - Flaticon</a></li>
                 </ul>
             </div>
         </div>
