@@ -50,12 +50,14 @@
             document.getElementById('opis').innerHTML = dane[4] + " ";
             document.getElementById('zdjecie').innerHTML = dane[5] + " ";
 
+        }
+
+        function wyswietlOsobeTel(){
             const leftDiv = document.getElementById("left");
             if (window.innerWidth < 1024) { // tylko na telefonach/tabletach
                 leftDiv.classList.remove("hidden");
                 leftDiv.classList.add("flex");
             }
-
         }
         //------------- TABLICA ZWIERZĘTA ------------------
         const zwierzeta = {
@@ -89,12 +91,16 @@
             document.getElementById('opis_zwierzecia').innerHTML = dane[2] + " ";
             document.getElementById('zdjecie_zwierzecia').innerHTML = dane[3] + " ";
 
+        }
+
+        function wyswietlZwierzeTel(){
             const leftDiv = document.getElementById("left");
             if (window.innerWidth < 1024) { // tylko na telefonach/tabletach
                 leftDiv.classList.remove("hidden");
                 leftDiv.classList.add("flex");
             }
         }
+
         //--------------- TREŚĆ STRONY LUDZIE -------------------
         function ludzie() {
             //----------------- H2 ------------------
@@ -125,8 +131,8 @@
                     </div>
                 </div>
                 <div id="right" class="lg:w-2/5 w-full h-full flex flex-wrap items-center justify-center lg:border-l-2 lg:border-white">
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -135,121 +141,111 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        </a>
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
-
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
                                     <b>Neil Armstrong</b>
@@ -284,8 +280,8 @@
                     </div>
                 </div>
                 <div id="right" class="lg:w-2/5 w-full h-full flex flex-wrap items-center justify-center lg:border-l-2 lg:border-white">
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -294,8 +290,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -304,8 +300,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -314,8 +310,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -324,8 +320,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -334,8 +330,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -344,8 +340,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -354,8 +350,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -364,8 +360,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -374,8 +370,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -384,8 +380,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -394,8 +390,8 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#nav2" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1')">
+                        <a href="#tresc" class="group">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-50 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
