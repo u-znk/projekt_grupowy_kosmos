@@ -1,75 +1,363 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oś czasu</title>
-    <link rel="stylesheet" href="style-podstrona1.css">
+    <link rel="icon" type="image/x-icon" href="../amongus.ico">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+     
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: normal 16px/1.5;
+    font-family: sans-serif;
+    background-color: black;
+    /*background: url(ziemia.jpg) left top no-repeat, url(ksiezyc.jpg)left bottom no-repeat, black;*/
+    background-size: contain;
+    color: white;
+    overflow-x: hidden;
+    padding-bottom: 5px;
+}
+
+.timeline{
+    background-color: black;
+    background-image: url(gwiazdy_bg.jpg);
+    /*border: 1px solid white;*/
+    box-shadow: 0 25px 45px black;
+    backdrop-filter: blur(10px);
+    padding: 50px 0;
+    max-width: 1300px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+@keyframes zoomInOut{
+    0%,
+    100%{
+        transform: scale(0.5);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.timeline ul li{ /*oś*/
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: white;
+    border: 3px solid white;
+    box-shadow: 0 25px 45px white;
+    backdrop-filter: blur(5px);
+    border-radius: 0px;
+}
+.timeline ul li::after{ /*gwiazdki na osi*/
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12 2l2.9 6.3L22 9.2l-5 5 1.2 7.8L12 18l-6.2 4 1.2-7.8-5-5 7.1-1L12 2z'/></svg>");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.timeline ul li:nth-child(odd) div{
+    left: 45px;
+}
+
+.timeline ul li:nth-child(even) div{
+    left: -429px;
+}
+
+/*animacje przejścia*/
+.timeline ul li::after{
+    transition: background 0.5s ease-in-out;
+}
+.timeline ul li.in-view::after{
+    transition: background 0.5s ease-in-out;
+}
+.timeline ul li div{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-child(odd) div{
+    transform: translate3d(200px, 0, 0);
+}
+.timeline ul li:nth-child(even) div{
+    transform: translate3d(-200px, 0, 0);
+}
+.timeline ul li.in-view div{
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*--------------------media screen---------------------*/
+@media screen and (max-width:900px){
+    .timeline ul li div{
+        width: 300px;
+    }
+    .timeline ul li:nth-child(even) div{
+        left: -330px;
+    }
+}
+@media screen and (max-width:600px){
+    .timeline ul li{
+        margin-left: 20px;
+    }
+    .timeline ul li div{
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div,
+    .timeline ul li:nth-child(odd) div{
+        left: 25px;
+        border-color: transparent black transparent transparent;
+    }
+}
+/*.timeline-clippy ul li::after{
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+.timeline-rhombus ul li::after{
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.timeline-rhombus ul li::before{
+    bottom: 12px;
+}
+.timeline-star ul li::after{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.timeline-heptagon ul li::after{
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%,);
+}  <-------po co to jest*/
+
+    </style>
+
 </head>
+
 <body>
+    <!---------- NAVIGATION ---------->
+    <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
+        <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
+    
+            <!-- Lewa strona: Logo -->
+            <div>
+                <a href="index.html" class="flex items-center text-white lg:text-base text-xs">
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Wróć na
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2 text-white" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <polygon fill="currentColor" points="154.219,205.188 166.219,335.031 110.922,405.563 96.406,296.563 "></polygon> <polygon fill="currentColor" points="357.781,205.188 345.766,335.031 401.063,405.563 415.594,296.563 "></polygon> <path fill="currentColor" d="M323.813,62.219C305.125,23.328,275.656,0,256,0s-49.125,23.344-67.813,62.219H323.813z"></path> <path fill="currentColor" d="M331.328,80.469H180.672c-6.641,19.156-10.594,41.094-10.047,65.188 c1.609,69.063,18.047,190.984,18.047,190.984l122.641-0.016l12,0.016c0,0,16.453-121.938,18.031-190.984 C341.922,121.563,337.969,99.609,331.328,80.469z M256,231.031c-23.578,0-42.688-19.094-42.688-42.672s19.125-42.672,42.688-42.672 s42.672,19.094,42.656,42.672C298.672,211.938,279.563,231.031,256,231.031z"></path> <path fill="currentColor" d="M429.516,512c-6.109-17.594-22.859-30.219-42.531-30.219c-6.297,0-12.297,1.281-17.766,3.625 c-1.875-20.578-19.188-36.688-40.25-36.688c-3.047,0-6,0.328-8.844,0.969c0.031-0.563,0.031-1.125,0.031-1.688 c0-15.531-12.594-28.125-28.125-28.125c-4.031,0-7.875,0.844-11.344,2.375c-9.734-17.219-12.563-62.156-12.563-62.156h-25.5 c0,0-3.266,49.344-14.813,65.688c-2.688-1.094-5.656-1.688-8.75-1.688c-13.016,0-23.563,10.547-23.563,23.563 c0,0.984,0.063,1.953,0.188,2.906c-3.719-1.203-3.281-1.844-7.406-1.844c-16.484,0-30.531,10.406-35.938,25 c-6.047-2.516-12.672-3.906-19.625-3.906c-25.156,0-46.063,18.219-50.234,42.188H429.516z"></path> </g> </g></svg>
+                    <span class="inline-block lg:text-xl text-xs" id="nazwa">Droga do gwiazd</span>
+                </a>
+            </div>
+
+            <!-- Hamburger - widoczny tylko na małych ekranach -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+
+            <!-- Menu na dużych ekranach -->
+            <ul id="menu" class="hidden md:flex items-center space-x-6 text-lg">
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#newest">Najnowsze wydarzenia</a>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#oldest">Najstarsze wydarzenia</a>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#info">Informacje dodatkowe</a>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Menu mobilne -->
+        <ul id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-4 text-lg">
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <button>
+                    <a href="#newest">Najnowsze wydarzenia</a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <button>
+                    <a href="#oldest">Najstarsze wydarzenia</a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                    <a href="#info">Informacje dodatkowe</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!---------- HEADER ------------->
+    <section class="relative bg-black bg-cover bg-top bg-no-repeat bg-scroll text-black flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('header_osczasu.jpg');">
+        <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6">
+            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words">Oś <br>czasu</h1>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
+    </section>
+    
+
+    <!--------------OŚ CZASU------------>
     <section class="timeline">
-        <h1 id="nazwa">Oś czasu</h1>
         <ul>
-            <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+            <li class="in-view" id="newest">
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
             <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
-            <li class="in-view">
-                <div>
-                    <img src="../square-placeholder.jpg" alt="Space">
-                    <h3 class="teko-headings">Kosmos - 01.01.1900</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+            <li class="in-view" id="oldest">
+                <div class="mt-20">
+                    <div class="w-[400px] h-[200px] bg-white p-1 overflow-hidden relative">
+                    <img class="w-full h-full object-cover " src="../square-placeholder.jpg" alt="Space">
+                    </div>
+                    <div class="relative bottom-0 w-[400px] p-8 bg-white rounded-none text-black mb-4 overflow-hidden">
+                    <h3 class="teko-headings block -mt-4 float-right text-[24px]">Kosmos - 01.01.1900</h3>
+                    <p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quia voluptates officiis vitae, placeat animi rerum minus quasi quaerat ipsum corrupti! Cum suscipit pariatur ab accusamus mollitia debitis rem unde.</p>
+                    </div>
                 </div>
             </li>
         </ul>
     </section>
+    <!---------- STOPKA ---------->
+    <footer id="info" class="text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('../moon.jpg');">
+        <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
+        <p>Autorki:</p>
+        <div class="flex items-center justify-between px-6 py-4 w-full">
+            <ul>
+                <li>Aleksandra Gwóźdź</li>
+                <li>Urszula Ziarnek</li>
+                <li>Paulina Ziółkowska</li>
+                <li>Sasha Yablonska</li>
+            </ul>
+            <div>
+                <p>Źródła:</p>
+                <ul>
+                    <li>Zdjęcia:</li>
+                    <li>Informacje:</li>
+                    <li>Ikony:</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="script-podstrona1.js"></script>
 </body>
 </html>
