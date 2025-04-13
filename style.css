@@ -22,3 +22,15 @@ h2, .teko-headings {
     font-weight: 350;
     font-style: normal;
 }
+/*schować scrollbar (na rzecz galerii sław)*/
+#galleryList {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#galleryList::-webkit-scrollbar {
+    display: none;
+}
+/*kropki w galerii sław (których na razie nie ma)*/
+/*.dot.active {
+    transform: scale(1.5);
+}*/

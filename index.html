@@ -105,14 +105,164 @@
 	</section>
 
 	<!---------- GALERIA SŁAW ----------->	
-	<section id="halloffame" class="bg-black text-white h-screen px-6 py-4">
-		<div>
-			<h2 class="py-6 text-4xl">Galeria sław</h2>
+	<section id="halloffame" class="bg-black text-white h-full px-6 py-4 relative overflow-hidden">
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14">
+		  <h2 class="py-6 text-4xl">Galeria sław</h2>
 		</div>
+		<div class="container mx-auto">
+		<!-- strzałki -->
+		<button id="prevBtn" class="invisible md:visible absolute left-2 lg:left-20 top-1/2 z-10 bg-white text-black p-2 rounded-full">
+		  <img src="circle-arrow-indicator-left-svgrepo-com.svg" alt="strzałka lewo" class="h-12">
+		</button>
+		<button id="nextBtn" class="invisible md:visible absolute right-2 lg:right-20 top-1/2 z-10 bg-white text-black p-2 rounded-full">
+		  <img src="circle-arrow-indicator-right-svgrepo-com.svg" alt="strzałka prawo" class="h-12">
+		</button>
+		<!-- zdjęcia w galerii -->
 		<div>
-			
+		  <ul id="galleryList" class="gallery-list p-4 flex gap-4 overflow-x-auto overflow-y-hidden h-[90vh] snap-x snap-mandatory scroll-smooth -mx-4">
+			<li id="firstItem" style="background-image:url('galeria_slaw_zdjecia/kopernik.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+				<div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded  w-full top-[70%]">
+					<p class="teko-headings-small text-3xl mt-4 mb-2">Mikołaj Kopernik (1473–1543)</p>
+					<hr style="height:2px; border-width:0; background-color:black">
+					<p class="text-lg my-4">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed tellus ligula. Curabitur pellentesque sem quis arcu egestas, sit amet consequat quam aliquam.
+					</p>
+				</div>
+			</li>
+			<li style="background-image:url('galeria_slaw_zdjecia/korolow.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+				<div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded  w-full top-[70%]">
+					<p class="teko-headings-small text-3xl mt-4 mb-2">Siergiej Korolow (1907–1966)</p>
+					<hr style="height:2px; border-width:0; background-color:black">
+					<p class="text-lg my-4">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed tellus ligula. Curabitur pellentesque sem quis arcu egestas, sit amet consequat quam aliquam.
+					</p>
+				</div>
+			</li>
+			<li style="background-image:url('galeria_slaw_zdjecia/johnson.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+				<div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded  w-full top-[70%]">
+					<p class="teko-headings-small text-3xl mt-4 mb-2">Katherine Johnson (1918–2020)</p>
+					<hr style="height:2px; border-width:0; background-color:black">
+					<p class="text-lg my-4">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed tellus ligula. Curabitur pellentesque sem quis arcu egestas, sit amet consequat quam aliquam.
+					</p>
+				</div>
+			</li>
+			<li style="background-image:url('galeria_slaw_zdjecia/hawking.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+				<div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded  w-full top-[70%]">
+					<p class="teko-headings-small text-3xl mt-4 mb-2">Stephen Hawking (1942–2018)</p>
+					<hr style="height:2px; border-width:0; background-color:black">
+					<p class="text-lg my-4">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed tellus ligula. Curabitur pellentesque sem quis arcu egestas, sit amet consequat quam aliquam.
+					</p>
+				</div>
+			</li>
+			<li id="lastItem" style="background-image:url('galeria_slaw_zdjecia/musk.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+				<div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded  w-full top-[70%]">
+					<p class="teko-headings-small text-3xl mt-4 mb-2">Elon Musk (ur. 1971)</p>
+					<hr style="height:2px; border-width:0; background-color:black">
+					<p class="text-lg my-4">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed tellus ligula. Curabitur pellentesque sem quis arcu egestas, sit amet consequat quam aliquam.
+					</p>
+				</div>
+			</li>
+		  </ul>
 		</div>
-	</section>
+		</div>
+		<!--kropki
+		<div class="dots-container flex justify-center gap-4 mt-4">
+            <div class="dot w-5 h-5 bg-white rounded-full cursor-pointer"></div>
+            <div class="dot w-5 h-5 bg-white rounded-full cursor-pointer"></div>
+            <div class="dot w-5 h-5 bg-white rounded-full cursor-pointer"></div>
+            <div class="dot w-5 h-5 bg-white rounded-full cursor-pointer"></div>
+            <div class="dot w-5 h-5 bg-white rounded-full cursor-pointer"></div>
+        </div>-->
+
+		<script>
+		const slider = document.getElementById('galleryList');
+		const items = slider.querySelectorAll('li');
+		const itemWidth = items[0].offsetWidth + 16; // item width + gap (Tailwind gap-4 = 1rem = 16px)
+		const prevBtn = document.getElementById('prevBtn');
+		const nextBtn = document.getElementById('nextBtn');
+		const firstItem = document.getElementById('firstItem');
+		const lastItem = document.getElementById('lastItem');
+		const dots = document.querySelectorAll('.dot');
+
+		// Kropki
+		//let currentIndex = 0;
+		//const totalItems = items.length;
+
+		//const goToSlide = (index) => {
+		//	slider.scrollLeft = items[index].offsetLeft;
+		//	currentIndex = index;
+		//	updateDots();
+		//};
+		//dots.forEach((dot, index) => {
+    	//	dot.addEventListener('click', () => goToSlide(index));
+		//});
+		//const updateDots = () => {
+		//	dots.forEach((dot, index) => {
+		//		if (index === currentIndex) {
+		//			dot.classList.add('active'); // Kropka dostaje .active
+		//		} else {
+		//			dot.classList.remove('active'); // Kropka traci .active
+		//		}
+		//	});
+		//};
+	  
+		// Drag to scroll
+		let isDown = false;
+		let startX;
+		let scrollLeft;
+	  
+		slider.addEventListener('mousedown', e => {
+			isDown = true;
+			slider.classList.add('active');
+			startX = e.pageX - slider.offsetLeft;
+			scrollLeft = slider.scrollLeft;
+		});
+		  
+		slider.addEventListener('mouseleave', () => isDown = false);
+		slider.addEventListener('mouseup', () => isDown = false);
+		slider.addEventListener('mousemove', e => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - slider.offsetLeft;
+			const walk = (x - startX) * 3;
+			slider.scrollLeft = scrollLeft - walk;
+		//	currentIndex = Math.floor(slider.scrollLeft / (firstItem.offsetWidth + 16));
+		//	updateDots();
+		});
+	  
+		  // Strzałki
+		prevBtn.addEventListener('click', () => {
+			if (slider.scrollLeft <= 0) {
+				slider.scrollLeft = lastItem.offsetLeft; // Do #lastItem
+			//	currentIndex = totalItems - 1;
+			} else {
+				slider.scrollLeft -= firstItem.offsetWidth + 16;
+			}
+		//	updateDots();
+		});
+		nextBtn.addEventListener('click', () => {
+			if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
+				slider.scrollLeft = firstItem.offsetLeft; // Do #firstItem
+			//	currentIndex = 0;
+			} else {
+				slider.scrollLeft += firstItem.offsetWidth + 16;
+			}
+		//	updateDots();
+		});
+		//slider.addEventListener('scroll', () => {
+    	//	const newIndex = Math.floor(slider.scrollLeft / (firstItem.offsetWidth + 16));
+    	//	if (newIndex !== currentIndex) {
+        //		currentIndex = newIndex;
+        //		updateDots();
+    	//	}
+		//});
+		//updateDots();
+		</script>
+
+	  </section>	  
 	
 	<!---------- QUIZ ----------->
 	<section id="quiz" class="h-screen px-6 py-4">
@@ -133,7 +283,7 @@
         </div>
   
         <!-- Link do źródeł w prawym dolnym rogu -->
-        <a href="zrodla.html" class="text-lg absolute bottom-4 right-6 text-sm underline">Zobacz źródła</a>
+        <a href="zrodla.html" class="text-lg absolute bottom-4 right-6 underline">Zobacz źródła</a>
     </footer>
 </body>
 </html>
