@@ -14,10 +14,18 @@
     <script>
         //------------- TABLICA LUDZIE ----------------
         const osoby = {
-            "Neil_Armstrong": ["Neil", "Armstrong", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"],
-            "Osoba2": ["imie_osoby_2", "nazwisko_osoby_2", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='astronauta.jpg'>"],
-            "Osoba3": ["imie_osoby_3", "nazwisko_osoby_3", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"],
-            "Osoba4": ["imie_osoby_4", "nazwisko_osoby_4", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='czlowiek.jpg'>"]
+            "Neil_Armstrong": ["Neil", "Armstrong", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Neil_Armstrong.jpg'>"],
+            "Jurij_Gagarin": ["Jurij", "Gagarin", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Jurij_Gagarin.jpg'>"],
+            "Buzz_Aldrin": ["Buzz", "Aldrin", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Buzz_Aldrin.jpg'>"],
+            "John_Glenn": ["John", "Glenn", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/John_Glenn.jpg'>"],
+            "Valentina_Tierieszkowa": ["Valentina", "Tierieszkowa", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Valentina_Tierieszkowa.jpg'>"],
+            "Chris_Hadfield": ["Chris", "Hadfield", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Chris_Hadfield.jpg'>"],
+            "Miroslaw_Hermaszewski": ["Mirosław", "Hermaszewski", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Miroslaw_Hermaszewski.jpg'>"],
+            "Sally_Ride": ["Sally", "Ride", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/Sally_Ride.jpg'>"],
+            "Aleksiej_Leonow": ["Aleksiej", "Leonow", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Aleksiej_Leonow.jpg'>"],
+            "Peggy_Whitson": ["Peggy", "Whitson", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Peggy_Whitson.jpg'>"],
+            "Yang_Liwei": ["Yang", "Liwei", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Yang_Liwei.jpg'>"],
+            "Alan_Shepard": ["Alan", "Shepard", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/Alan_Shepard.jpg'>"]
         };
         //------------- FUNKCJA LUDZIE ----------------
         function wyswietlOsobe(imie) {
@@ -26,15 +34,39 @@
                 case "Neil_Armstrong":
                     dane = osoby.Neil_Armstrong;
                     break;
-                case "Osoba2":
-                    dane = osoby.Osoba2;
+                case "Jurij_Gagarin":
+                    dane = osoby.Jurij_Gagarin;
                     break;
-                case "Osoba3":
-                    dane = osoby.Osoba3;
+                case "Buzz_Aldrin":
+                    dane = osoby.Buzz_Aldrin;
                     break;
-                case "Osoba4":
-                    dane = osoby.Osoba4;
+                case "John_Glenn":
+                    dane = osoby.John_Glenn;
                     break;
+                case "Valentina_Tierieszkowa":
+                    dane = osoby.Valentina_Tierieszkowa;
+                    break;
+                case "Chris_Hadfield":
+                    dane = osoby.Chris_Hadfield;
+                    break;
+                case "Miroslaw_Hermaszewski":
+                    dane = osoby.Miroslaw_Hermaszewski;
+                    break;
+                case "Sally_Ride":
+                    dane = osoby.Sally_Ride;
+                    break;
+                case "Aleksiej_Leonow":
+                    dane = osoby.Aleksiej_Leonow;
+                    break;
+                case "Peggy_Whitson":
+                    dane = osoby.Peggy_Whitson;
+                    break;
+                case "Yang_Liwei":
+                    dane = osoby.Yang_Liwei;
+                    break;
+                case "Alan_Shepard":
+                    dane = osoby.Alan_Shepard;
+                    break;  
                 default:
                     dane = ["Nieznana", "Osoba", "", "Brak informacji",""];
             }
@@ -111,8 +143,8 @@
             //----------------- MAIN ----------------
             document.getElementById('main').innerHTML = `
                 <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
-                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-12">
-                        <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 hover:scale-125">
+                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
+                        <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125">
                         </div>
                     </div>
                     <div class="lg:w-1/2 w-full flex items-center justify-center">
@@ -136,7 +168,7 @@
                             <b>Poznaj astronautów, którzy odbyli podróż poza Ziemię</b>
                         </h3>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Neil_Armstrong.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
@@ -146,113 +178,113 @@
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Jurij_Gagarin.jpg');" onclick="wyswietlOsobe('Jurij_Gagarin'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Jurij Gagarin</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Buzz_Aldrin.jpg');" onclick="wyswietlOsobe('Buzz_Aldrin'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Buzz Aldrin</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/John_Glenn.jpg');" onclick="wyswietlOsobe('John_Glenn'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>John Glenn</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Valentina_Tierieszkowa.jpg');" onclick="wyswietlOsobe('Valentina_Tierieszkowa'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Valentina Tierieszkowa</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Chris_Hadfield.jpg');" onclick="wyswietlOsobe('Chris_Hadfield'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Chris Hadfield</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Miroslaw_Hermaszewski.jpg');" onclick="wyswietlOsobe('Miroslaw_Hermaszewski'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Mirosław Hermaszewski</b>
                                 </span>
                             </button>
                         </a>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Sally_Ride.jpg');" onclick="wyswietlOsobe('Sally_Ride'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Sally Ride</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Aleksiej_Leonow.jpg');" onclick="wyswietlOsobe('Aleksiej_Leonow'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Aleksiej Leonow</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Peggy_Whitson.jpg');" onclick="wyswietlOsobe('Peggy_Whitson'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Peggy Whitson</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Yang_Liwei.jpg');" onclick="wyswietlOsobe('Yang_Liwei'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Yang Liwei</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('czlowiek.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Alan_Shepard.jpg');" onclick="wyswietlOsobe('Alan_Shepard'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-xs transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Neil Armstrong</b>
+                                    <b>Alan Shepard</b>
                                 </span>
                             </button>
                         </a>
@@ -266,8 +298,8 @@
             document.getElementById('svg').innerHTML = '<img src="svg_dog_astronaut.png" class="h-[50px]">';
             document.getElementById('main').innerHTML = `
                 <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
-                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-12">
-                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 hover:scale-125"></div>
+                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
+                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125"></div>
                     </div>
                     <div class="lg:w-1/2 w-full flex items-center justify-center">
                         <div class="w-80 h-80 ">
@@ -441,12 +473,16 @@
             <ul id="menu" class="hidden md:flex items-center space-x-6 text-lg">
                 <li>
                     <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
-                        <button onclick="ludzie()">Ludzie</button>
+                        <a href="#nav2">
+                            <button onclick="ludzie()">Ludzie</button>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
-                        <button onclick="zwierze()">Zwierzęta</button>
+                        <a href="#nav2">
+                            <button onclick="zwierze()">Zwierzęta</button>
+                        </a>
                     </div>
                 </li>
                 <li>
@@ -513,7 +549,7 @@
                     <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 mb-8 lg:mb-0">
                         <a href="#nav2">
                             <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
-                                Zwierzęta
+                                Zwierzęta 
                             </button>
                         </a>
                     </div>
