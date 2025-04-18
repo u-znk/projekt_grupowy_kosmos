@@ -12,6 +12,19 @@
     <style type="text/tailwindcss">
     </style>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" as="image" href="astronaut.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Neil_Armstrong.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Jurij_Gagarin.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Buzz_Aldrin.jpg">
+    <link rel="preload" as="image" href="Zdjecia/John_Glenn.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Valentina_Tierieszkowa.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Chris_Hadfield.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Miroslaw_Hermaszewski.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Sally_Ride.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Aleksiej_Leonow.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Peggy_Whitson.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Yang_Liwei.jpg">
+    <link rel="preload" as="image" href="Zdjecia/Alan_Shepard.jpg">
     <script>
         //------------- TABLICA LUDZIE ----------------
         const osoby = {
@@ -450,7 +463,7 @@
         };
     </script>
 </head>
-<body class="overflow-x-hidden ">
+<body class="overflow-x-hidden bg-black">
     <!---------- NAVIGATION ---------->
     <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
         <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
@@ -530,35 +543,74 @@
         });
     </script>
     <!---------- HEADER ------------->
-    <section class="inset-0 relative bg-black bg-cover bg-top bg-no-repeat bg-fixed text-white flex flex-col justify-center text-center h-screen lg:h-auto absolute overflow-hidden" style="background-image: url('astronaut.jpg');">
-            <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6 z-10">
-                <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words">Odkrywcy <br>kosmosu</h1>
-            </div>
-            <!--------- PRZYCISKI ------------>
-            <div class="w-full flex justify-center">
-                <div id="buttons" class="w-full px-2 lg:px-6 pb-[40px] lg:pb-[140px] text-center flex flex-wrap lg:pt-0">
-                    <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
-                        <div class=" w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0">
-                            <a href="#nav2">
-                                <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="ludzie()">
-                                    Ludzie
-                                </button>
-                            </a>
-                        </div>
+    <section class="relative h-screen lg:h-auto overflow-hidden text-white">
+    <!-- TŁO PARALLAX -->
+    <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
+     style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
+
+    <!-- TREŚĆ SEKCJI -->
+    <div class="relative z-10 flex flex-col justify-center text-center h-full">
+        <!-- Nagłówek -->
+        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-3/6 lg:h-screen">
+            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words">Odkrywcy <br>kosmosu</h1>
+        </div>
+
+        <!-- PRZYCISKI -->
+        <div class="w-full flex justify-center">
+            <div id="buttons" class="w-full px-2 lg:px-6 pb-[40px] lg:pb-[140px] text-center flex flex-wrap lg:pt-0">
+                <!-- Ludzie -->
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="ludzie()">
+                                Ludzie
+                            </button>
+                        </a>
                     </div>
-                    <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
-                        <div class=" w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 mb-8 lg:mb-0">
-                            <a href="#nav2">
-                                <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
-                                    Zwierzęta 
-                                </button>
-                            </a>
-                        </div>
+                </div>
+
+                <!-- Zwierzęta -->
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 mb-8 lg:mb-0">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
+                                Zwierzęta 
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
-    </section>
+        </div>
+    </div>
+
+    <!-- Gradient na dole -->
+    <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
+    <script>
+        const parallax = document.getElementById('parallax-bg');
+        const img = new Image();
+        img.src = 'astronaut.jpg';
+        img.onload = () => {
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateParallax() {
+                parallax.style.transform = `translate3d(0, ${lastScrollY * 0.5}px, 0)`;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+            lastScrollY = window.scrollY;
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        });
+
+        // Ustaw początkowy stan
+        updateParallax();
+        };
+    </script>
+</section>
     <!--------- NAV WEWNĘTRZNA ----------->
     <section id="nav2" class="text-white bg-black flex px-6 pb-4 pt-8 w-full text-6xl">
         <div id="nazwa" class="w-full py-8">
@@ -592,13 +644,6 @@
         <!-- Link do źródeł w prawym dolnym rogu -->
         <a href="zrodla.html" class="text-lg absolute bottom-4 right-6 text-sm underline">Zobacz źródła</a>
     </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,  // czas animacji
-    once: false,    // animacja przy każdej zmianie widoku
-    mirror: true    // animacja w obie strony (wejście i wyjście)
-  });
-</script>
+
     </body>
 </html>
