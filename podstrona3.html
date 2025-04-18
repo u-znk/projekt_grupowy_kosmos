@@ -586,19 +586,32 @@
     <!-- Gradient na dole -->
     <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
     <script>
-        const parallax = document.getElementById('parallax-bg');
-        const img = new Image();
-        img.src = 'astronaut.jpg';
-        img.onload = () => {
-            let lastScrollY = window.scrollY;
-            let ticking = false;
+    const parallax = document.getElementById('parallax-bg');
+    const buttons = document.getElementById('buttons'); // poprawka: nie id="parallax_buttons", tylko kontener
 
-            function updateParallax() {
-                parallax.style.transform = `translate3d(0, ${lastScrollY * 0.5}px, 0)`;
-                ticking = false;
-            }
+    const img = new Image();
+    img.src = 'astronaut.jpg';
 
-            window.addEventListener('scroll', () => {
+    img.onload = () => {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateParallax() {
+            // Efekt paralaksy tła
+            const offset = lastScrollY * 0.5;
+            parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
+
+            // Przesuwanie przycisków w górę
+            const maxShift = 100;
+            const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
+            buttons.style.transform = `translateY(-${buttonsShift}px)`;
+
+            
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
             lastScrollY = window.scrollY;
             if (!ticking) {
                 requestAnimationFrame(updateParallax);
@@ -606,10 +619,10 @@
             }
         });
 
-        // Ustaw początkowy stan
+        // Uruchom od razu
         updateParallax();
-        };
-    </script>
+    };
+</script>
 </section>
     <!--------- NAV WEWNĘTRZNA ----------->
     <section id="nav2" class="text-white bg-black flex px-6 pb-4 pt-8 w-full text-6xl">
