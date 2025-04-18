@@ -544,98 +544,95 @@
     </script>
     <!---------- HEADER ------------->
     <section class="relative h-screen lg:h-auto overflow-hidden text-white lg:pb-[100px]">
-  <!-- TŁO PARALLAX -->
-  <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
-       style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
+    <!-- TŁO PARALLAX -->
+    <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
+     style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
 
-  <!-- TREŚĆ SEKCJI -->
-  <div class="relative z-10 flex flex-col justify-center text-center h-full">
-    <!-- Nagłówek -->
-    <div id="header" class="w-full flex items-center justify-center text-center px-4 h-4/6 lg:h-screen">
-      <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
-        Odkrywcy <br>kosmosu
-      </h1>
-    </div>
-
-    <!-- PRZYCISKI -->
-    <div class="w-full flex justify-center items-start h-2/6 relative z-10 px-2 lg:px-6">
-      <div id="buttons" class="flex flex-wrap justify-center w-full gap-4">
-        <!-- Ludzie -->
-        <div class="lg:w-1/2 w-full flex items-center justify-center">
-          <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg mb-5 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
-            <a href="#nav2">
-              <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="ludzie()">
-                Ludzie
-              </button>
-            </a>
-          </div>
+    <!-- TREŚĆ SEKCJI -->
+    <div class="relative z-10 flex flex-col justify-center text-center h-full">
+        <!-- Nagłówek -->
+        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-4/6 lg:h-screen">
+            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Odkrywcy <br>kosmosu</h1>
         </div>
 
-        <!-- Zwierzęta -->
-        <div class="lg:w-1/2 w-full flex items-center justify-center">
-          <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg mb-8 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
-            <a href="#nav2">
-              <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
-                Zwierzęta
-              </button>
-            </a>
-          </div>
+        <!-- PRZYCISKI -->
+        <div class="w-full flex justify-center h-2/6">
+            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10">
+                <!-- Ludzie -->
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="ludzie()">
+                                Ludzie
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Zwierzęta -->
+                <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
+                    <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 mb-8 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
+                        <a href="#nav2">
+                            <button class="bg-black text-white font-medium text-lg w-full rounded-full px-5 py-3 flex items-center justify-center gap-2 transition-all duration-300 hover:bg-transparent hover:text-black hover:font-semibold" onclick="zwierze()">
+                                Zwierzęta 
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Gradient na dole -->
-  <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
-
-  <!-- JS Parallax -->
-  <script>
+    <!-- Gradient na dole -->
+    <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
+    <script>
     const parallax = document.getElementById('parallax-bg');
-    const buttons = document.getElementById('buttons');
+const buttons = document.getElementById('buttons');
 
-    const img = new Image();
-    img.src = 'astronaut.jpg';
+const img = new Image();
+img.src = 'astronaut.jpg';
 
-    img.onload = () => {
-      let lastScrollY = window.scrollY;
-      let ticking = false;
+img.onload = () => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-      function getMaxShift() {
-        if (window.innerWidth >= 1024) return 110;
-        else if (window.innerWidth >= 768) return 80;
-        else return 60;
-      }
+    function getMaxShift() {
+        // Zmienna maxShift w zależności od szerokości okna
+        if (window.innerWidth >= 1024) { // Duże ekrany (np. desktop)
+            return 110;  // Większy przesuw na dużych ekranach
+        } else if (window.innerWidth >= 768) { // Średnie ekrany (np. tablet)
+            return 80;  // Średni przesuw na tabletach
+        } else { // Małe ekrany (np. telefony)
+            return 60;  // Mniejszy przesuw na telefonach
+        }
+    }
 
-      function updateParallax() {
-  const offset = lastScrollY * 0.5;
-  parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
+    function updateParallax() {
+        // Efekt paralaksy tła
+        const offset = lastScrollY * 0.5;
+        parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
 
-  const maxShift = getMaxShift();
-  const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
+        // Przesuwanie przycisków w górę
+        const maxShift = getMaxShift();
+        const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
+        buttons.style.transform = `translateY(-${buttonsShift}px)`;
 
-  // 💥 Kluczowa poprawka:
-  if (window.innerWidth >= 1024) {
-    buttons.style.transform = `translateY(-${buttonsShift}px)`;
-  } else {
-    buttons.style.transform = 'translateY(0)';
-  }
+        ticking = false;
+    }
 
-  ticking = false;
-}
-
-      window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
         lastScrollY = window.scrollY;
         if (!ticking) {
-          requestAnimationFrame(updateParallax);
-          ticking = true;
+            requestAnimationFrame(updateParallax);
+            ticking = true;
         }
-      });
+    });
 
-      updateParallax();
-    };
-  </script>
+    // Uruchom od razu
+    updateParallax();
+};
+</script>
 </section>
-
     <!--------- NAV WEWNĘTRZNA ----------->
     <section id="nav2" class="text-white bg-black flex px-6 pb-4 pt-8 w-full text-6xl">
         <div id="nazwa" class="w-full py-8" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
