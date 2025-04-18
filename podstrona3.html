@@ -543,7 +543,7 @@
         });
     </script>
     <!---------- HEADER ------------->
-    <section class="relative h-screen lg:h-auto overflow-hidden text-white">
+    <section class="relative h-screen lg:h-auto overflow-hidden text-white lg:pb-[100px]">
     <!-- TŁO PARALLAX -->
     <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
      style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
@@ -551,13 +551,13 @@
     <!-- TREŚĆ SEKCJI -->
     <div class="relative z-10 flex flex-col justify-center text-center h-full">
         <!-- Nagłówek -->
-        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-3/6 lg:h-screen">
+        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-4/6 lg:h-screen">
             <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words">Odkrywcy <br>kosmosu</h1>
         </div>
 
         <!-- PRZYCISKI -->
-        <div class="w-full flex justify-center">
-            <div id="buttons" class="w-full px-2 lg:px-6 pb-[40px] lg:pb-[140px] text-center flex flex-wrap lg:pt-0">
+        <div class="w-full flex justify-center h-2/6">
+            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10">
                 <!-- Ludzie -->
                 <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
                     <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0">
@@ -587,41 +587,50 @@
     <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
     <script>
     const parallax = document.getElementById('parallax-bg');
-    const buttons = document.getElementById('buttons'); // poprawka: nie id="parallax_buttons", tylko kontener
+const buttons = document.getElementById('buttons');
 
-    const img = new Image();
-    img.src = 'astronaut.jpg';
+const img = new Image();
+img.src = 'astronaut.jpg';
 
-    img.onload = () => {
-        let lastScrollY = window.scrollY;
-        let ticking = false;
+img.onload = () => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
 
-        function updateParallax() {
-            // Efekt paralaksy tła
-            const offset = lastScrollY * 0.5;
-            parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
-
-            // Przesuwanie przycisków w górę
-            const maxShift = 100;
-            const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
-            buttons.style.transform = `translateY(-${buttonsShift}px)`;
-
-            
-
-            ticking = false;
+    function getMaxShift() {
+        // Zmienna maxShift w zależności od szerokości okna
+        if (window.innerWidth >= 1024) { // Duże ekrany (np. desktop)
+            return 110;  // Większy przesuw na dużych ekranach
+        } else if (window.innerWidth >= 768) { // Średnie ekrany (np. tablet)
+            return 80;  // Średni przesuw na tabletach
+        } else { // Małe ekrany (np. telefony)
+            return 60;  // Mniejszy przesuw na telefonach
         }
+    }
 
-        window.addEventListener('scroll', () => {
-            lastScrollY = window.scrollY;
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
+    function updateParallax() {
+        // Efekt paralaksy tła
+        const offset = lastScrollY * 0.5;
+        parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
 
-        // Uruchom od razu
-        updateParallax();
-    };
+        // Przesuwanie przycisków w górę
+        const maxShift = getMaxShift();
+        const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
+        buttons.style.transform = `translateY(-${buttonsShift}px)`;
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
+
+    // Uruchom od razu
+    updateParallax();
+};
 </script>
 </section>
     <!--------- NAV WEWNĘTRZNA ----------->
