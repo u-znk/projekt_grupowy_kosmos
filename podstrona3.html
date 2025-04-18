@@ -156,32 +156,34 @@
             document.getElementById('svg').innerHTML = '<img src="svg_astronaut.png" class="h-[50px]">';
             //----------------- MAIN ----------------
             document.getElementById('main').innerHTML = `
-                <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
-                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
-                        <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
+                        <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
+                            <div id="zdjecie" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125">
+                            </div>
                         </div>
-                    </div>
-                    <div class="lg:w-1/2 w-full flex items-center justify-center">
-                        <div class="w-80 h-80 ">
-                            <hr class="border-2 border-white w-full">
-                            <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
-                                <p class="pr-2 max-w-full break-words" id="imie"></p>
-                                <p class="max-w-full break-words" id="nazwisko"></p>
+                        <div class="lg:w-1/2 w-full flex items-center justify-center">
+                            <div class="w-80 h-80 ">
+                                <hr class="border-2 border-white w-full">
+                                <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
+                                    <p class="pr-2 max-w-full break-words" id="imie"></p>
+                                    <p class="max-w-full break-words" id="nazwisko"></p>
+                                </div>
+                                <hr class="border-2 border-white w-full">
+                                <div class="justify-center flex items-center w-full">
+                                    <p class="text-center my-4 flex items-center" id="data_ur"></p>
+                                    <p class="text-center my-4 flex items-center" id="data_sm"></p>
+                                </div>
+                                <p class="text-justify my-4" id="opis"></p>
                             </div>
-                            <hr class="border-2 border-white w-full">
-                            <div class="justify-center flex items-center w-full">
-                                <p class="text-center my-4 flex items-center" id="data_ur"></p>
-                                <p class="text-center my-4 flex items-center" id="data_sm"></p>
-                            </div>
-                            <p class="text-justify my-4" id="opis"></p>
                         </div>
                     </div>
                 </div>
-                <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center ">
+                <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center" data-aos="fade-left" data-aos-duration="1000">
                         <h3 class="text-center text-xl font-semibold my-8 text-white w-full">
                             <b class="px-2">Poznaj astronautów, którzy odbyli podróż poza Ziemię</b>
                         </h3>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Neil_Armstrong.jpg');" onclick="wyswietlOsobe('Neil_Armstrong'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -191,7 +193,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Jurij_Gagarin.jpg');" onclick="wyswietlOsobe('Jurij_Gagarin'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -201,7 +203,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Buzz_Aldrin.jpg');" onclick="wyswietlOsobe('Buzz_Aldrin'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -211,7 +213,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/John_Glenn.jpg');" onclick="wyswietlOsobe('John_Glenn'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -221,7 +223,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Valentina_Tierieszkowa.jpg');" onclick="wyswietlOsobe('Valentina_Tierieszkowa'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -231,7 +233,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Chris_Hadfield.jpg');" onclick="wyswietlOsobe('Chris_Hadfield'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -241,7 +243,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Miroslaw_Hermaszewski.jpg');" onclick="wyswietlOsobe('Miroslaw_Hermaszewski'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -252,7 +254,7 @@
                             </button>
                         </a>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Sally_Ride.jpg');" onclick="wyswietlOsobe('Sally_Ride'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -262,7 +264,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Aleksiej_Leonow.jpg');" onclick="wyswietlOsobe('Aleksiej_Leonow'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -272,7 +274,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Peggy_Whitson.jpg');" onclick="wyswietlOsobe('Peggy_Whitson'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -282,7 +284,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Yang_Liwei.jpg');" onclick="wyswietlOsobe('Yang_Liwei'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -292,7 +294,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Alan_Shepard.jpg');" onclick="wyswietlOsobe('Alan_Shepard'); wyswietlOsobeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -305,35 +307,38 @@
                 </div>
             `;
 
+
             wyswietlOsobe('Neil_Armstrong');
         }
         function zwierze() {
             document.getElementById('zmiana').innerHTML = '<span class="inline align-middle"><b>ZWIERZĘTA</b></span>';
             document.getElementById('svg').innerHTML = '<img src="svg_dog_astronaut.png" class="h-[50px]">';
             document.getElementById('main').innerHTML = `
-                <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
-                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
-                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125"></div>
-                    </div>
-                    <div class="lg:w-1/2 w-full flex items-center justify-center">
-                        <div class="w-80 h-80 ">
-                            <hr class="border-2 border-white w-full">
-                            <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
-                                <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
+                        <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
+                            <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125"></div>
                             </div>
-                            <hr class="border-2 border-white w-full">
-                            <div class="justify-center flex items-center w-full">
-                                <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
+                            <div class="lg:w-1/2 w-full flex items-center justify-center">
+                                <div class="w-80 h-80 ">
+                                    <hr class="border-2 border-white w-full">
+                                    <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
+                                    <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
+                                </div>
+                                <hr class="border-2 border-white w-full">
+                                <div class="justify-center flex items-center w-full">
+                                    <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
+                                </div>
+                                <p class="text-justify my-4" id="opis_zwierzecia"></p>
                             </div>
-                            <p class="text-justify my-4" id="opis_zwierzecia"></p>
                         </div>
                     </div>
                 </div>
                 <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center">
-                        <h3 class="text-center text-xl font-semibold my-8 text-white w-full">
+                        <h3 class="text-center text-xl font-semibold my-8 text-white w-full" data-aos="fade-left" data-aos-duration="1000">
                             <b>Zwierzęta, które pomogły zdobywać kosmos</b>
                         </h3>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -343,7 +348,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -353,7 +358,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -363,7 +368,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -373,7 +378,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -383,7 +388,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -393,7 +398,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -403,7 +408,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -413,7 +418,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -423,7 +428,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -433,7 +438,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -443,7 +448,7 @@
                                 </span>
                             </button>
                         </a>
-                        <a href="#tresc" class="group">
+                        <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover m-4 rounded-full transition-all duration-300 hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
@@ -551,13 +556,13 @@
     <!-- TREŚĆ SEKCJI -->
     <div class="relative z-10 flex flex-col justify-center text-center h-full">
         <!-- Nagłówek -->
-        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-4/6 lg:h-screen">
+        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-2/4 lg:h-screen">
             <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Odkrywcy <br>kosmosu</h1>
         </div>
 
         <!-- PRZYCISKI -->
-        <div class="w-full flex justify-center h-2/6">
-            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10">
+        <div class="w-full flex justify-center h-2/4">
+            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10 pt-[15%] lg:pt-0">
                 <!-- Ludzie -->
                 <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
                     <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
@@ -634,7 +639,7 @@ img.onload = () => {
 </script>
 </section>
     <!--------- NAV WEWNĘTRZNA ----------->
-    <section id="nav2" class="text-white bg-black flex px-6 pb-4 pt-8 w-full text-6xl">
+    <section id="nav2" class="text-white bg-black flex px-6 pb-4 w-full text-6xl">
         <div id="nazwa" class="w-full py-8" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
             <div class="flex-grow border-t border-white"></div>
             <h2 id="zmiana" class="text-center pt-12 pb-4"></h2>
@@ -651,7 +656,7 @@ img.onload = () => {
         </div>
     </section>
     <!---------- STOPKA ---------->
-    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('moon.jpg');">
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('moon.jpg');" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" >
         <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
         <p>Autorki:</p>
         <div class="flex items-center justify-between px-6 w-full">
