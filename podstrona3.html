@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth overflow-x-hidden">
+<html class="scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -314,28 +314,26 @@
             document.getElementById('zmiana').innerHTML = '<span class="inline align-middle"><b>ZWIERZĘTA</b></span>';
             document.getElementById('svg').innerHTML = '<img src="svg_dog_astronaut.png" class="h-[50px]">';
             document.getElementById('main').innerHTML = `
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
-                        <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
-                            <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125"></div>
+                <div id="left" class="hidden lg:flex lg:w-auto lg:mx-8 w-full flex-col lg:flex-row items-center justify-center">
+                    <div class="lg:w-1/2 w-full h-full flex items-center justify-center lg:mr-14 mb-6 lg:mb-0">
+                        <div id="zdjecie_zwierzecia" class="w-80 h-80 overflow-hidden rounded-xl shadow-lg border-2 border-white transition-all duration-300 lg:hover:scale-125"></div>
+                    </div>
+                    <div class="lg:w-1/2 w-full flex items-center justify-center">
+                        <div class="w-80 h-80 ">
+                            <hr class="border-2 border-white w-full">
+                            <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
+                                <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
                             </div>
-                            <div class="lg:w-1/2 w-full flex items-center justify-center">
-                                <div class="w-80 h-80 ">
-                                    <hr class="border-2 border-white w-full">
-                                    <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
-                                    <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
-                                </div>
-                                <hr class="border-2 border-white w-full">
-                                <div class="justify-center flex items-center w-full">
-                                    <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
-                                </div>
-                                <p class="text-justify my-4" id="opis_zwierzecia"></p>
+                            <hr class="border-2 border-white w-full">
+                            <div class="justify-center flex items-center w-full">
+                                <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
                             </div>
+                            <p class="text-justify my-4" id="opis_zwierzecia"></p>
                         </div>
                     </div>
                 </div>
                 <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center">
-                        <h3 class="text-center text-xl font-semibold my-8 text-white w-full" data-aos="fade-left" data-aos-duration="1000">
+                        <h3 class="text-center text-xl font-semibold my-8 text-white w-full">
                             <b>Zwierzęta, które pomogły zdobywać kosmos</b>
                         </h3>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
@@ -562,7 +560,7 @@
 
         <!-- PRZYCISKI -->
         <div class="w-full flex justify-center h-2/4">
-            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10 pt-[13%] lg:pt-0">
+            <div id="buttons" class="absolute left-0 w-full px-2 lg:px-6 text-center flex flex-wrap justify-center z-10 pt-[15%] lg:pt-0">
                 <!-- Ludzie -->
                 <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
                     <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
