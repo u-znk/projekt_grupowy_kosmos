@@ -29,6 +29,9 @@
         #buttons {
             will-change: transform;
         }
+        #parallax-img {
+            will-change: transform;
+        }
     </style>
     <script>
         //------------- TABLICA LUDZIE ----------------
@@ -559,7 +562,7 @@
     <!---------- HEADER ------------->
     <section class="relative h-screen lg:h-auto overflow-hidden text-white">
     <!-- TŁO PARALLAX -->
-    <img src="astronaut.jpg" alt="Parallax background" loading="lazy"
+    <img src="astronaut.jpg" alt="Parallax background"
      id="parallax-img"
      class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] object-cover z-0 will-change-transform pointer-events-none" />
 
@@ -638,7 +641,9 @@ img.onload = () => {
     window.addEventListener('scroll', () => {
         lastScrollY = window.scrollY;
         if (!ticking) {
-            requestAnimationFrame(updateParallax);
+            window.requestAnimationFrame(() => {
+                updateParallax();
+            });
             ticking = true;
         }
     });
