@@ -25,17 +25,6 @@
     <link rel="preload" as="image" href="Zdjecia/Peggy_Whitson.jpg">
     <link rel="preload" as="image" href="Zdjecia/Yang_Liwei.jpg">
     <link rel="preload" as="image" href="Zdjecia/Alan_Shepard.jpg">
-    <style type="text/css">
-        #buttons {
-            will-change: transform;
-        }
-        #parallax-img {
-            will-change: transform;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-    </style>
     <script>
         //------------- TABLICA LUDZIE ----------------
         const osoby = {
@@ -565,15 +554,9 @@
     <!---------- HEADER ------------->
     <section class="relative h-screen lg:h-auto overflow-hidden text-white">
     <!-- TŁO PARALLAX -->
-    <div id="parallax-layer" class="absolute top-0 left-0 w-full h-[120vh] z-0 overflow-hidden">
-        <img id="parallax-img" src="astronaut.jpg"
-            alt="tło"
-            class="w-full h-full object-cover"
-            style="will-change: transform; backface-visibility: hidden; transform: translateZ(0);" />
-         <!-- Gradient na dole -->
-        <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
-    </div>
-   
+    <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
+     style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
+
     <!-- TREŚĆ SEKCJI -->
     <div class="relative z-10 flex flex-col justify-center text-center h-full">
         <!-- Nagłówek -->
@@ -583,7 +566,7 @@
 
         <!-- PRZYCISKI -->
         <div class="w-full flex justify-center">
-            <div id="buttons" class=" w-full px-2 lg:px-6 pb-[40px] lg:pb-[140px] text-center flex flex-wrap lg:pt-0 overflow-y-clip">
+            <div id="buttons" class="w-full px-2 lg:px-6 pb-[40px] lg:pb-[140px] text-center flex flex-wrap lg:pt-0 overflow-y-clip">
                 <!-- Ludzie -->
                 <div class="lg:w-1/2 w-full flex items-center text-center justify-center">
                     <div class="w-[300px] rounded-full p-[2px] bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg relative z-10 mb-5 lg:mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
@@ -608,58 +591,55 @@
             </div>
         </div>
     </div>
+
+    <!-- Gradient na dole -->
+    <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
     <script>
-  const parallax = document.getElementById('parallax-img');
-  const buttons = document.getElementById('buttons');
+    const parallax = document.getElementById('parallax-bg');
+const buttons = document.getElementById('buttons');
 
-  // Po załadowaniu obrazka
-  const img = new Image();
-  img.src = 'astronaut.jpg';
+const img = new Image();
+img.src = 'astronaut.jpg';
 
-  img.onload = () => {
+img.onload = () => {
+    let lastScrollY = window.scrollY;
     let ticking = false;
 
     function getMaxShift() {
-      if (window.innerWidth >= 1024) {
-        return 110;
-      } else if (window.innerWidth >= 768) {
-        return 80;
-      } else {
-        return 60;
-      }
+        // Zmienna maxShift w zależności od szerokości okna
+        if (window.innerWidth >= 1024) { // Duże ekrany (np. desktop)
+            return 110;  // Większy przesuw na dużych ekranach
+        } else if (window.innerWidth >= 768) { // Średnie ekrany (np. tablet)
+            return 80;  // Średni przesuw na tabletach
+        } else { // Małe ekrany (np. telefony)
+            return 60;  // Mniejszy przesuw na telefonach
+        }
     }
 
     function updateParallax() {
-      const scrollY = window.scrollY;
+        // Efekt paralaksy tła
+        const offset = lastScrollY * 0.5;
+        parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
 
-      // 🧠 iPad-friendly transform
-      if (window.innerWidth >= 768) {
-        parallax.style.transform = `translateY(${scrollY * 0.4}px)`;
-      } else {
-        parallax.style.transform = `translateY(0)`;
-      }
+        // Przesuwanie przycisków w górę
+        const maxShift = getMaxShift();
+        const buttonsShift = Math.min(lastScrollY * 0.3, maxShift);
+        buttons.style.transform = `translateY(-${buttonsShift}px)`;
 
-      const maxShift = getMaxShift();
-      const buttonsShift = Math.min(scrollY * 0.3, maxShift);
-      buttons.style.transform = `translateY(-${buttonsShift}px)`;
-
-      ticking = false;
+        ticking = false;
     }
 
-    function onScroll() {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateParallax();
-        });
-        ticking = true;
-      }
-    }
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
 
-    window.addEventListener('scroll', onScroll);
-
-    // 🔄 na start
+    // Uruchom od razu
     updateParallax();
-  };
+};
 </script>
 </section>
     <!--------- NAV WEWNĘTRZNA ----------->
@@ -680,7 +660,7 @@
         </div>
     </section>
     <!---------- STOPKA ---------->
-    <footer id="info" class="relative text-white bg-cover bg-top min-h-200 px-6 py-4" style="background-image: url('moon.jpg');" data-aos="fade-down" data-aos-duration="500" data-aos-offset="200" >
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('moon.jpg');">
         <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
         <p>Autorki:</p>
         <div class="flex items-center justify-between px-6 w-full">
