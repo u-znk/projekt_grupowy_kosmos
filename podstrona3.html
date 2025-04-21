@@ -25,6 +25,11 @@
     <link rel="preload" as="image" href="Zdjecia/Peggy_Whitson.jpg">
     <link rel="preload" as="image" href="Zdjecia/Yang_Liwei.jpg">
     <link rel="preload" as="image" href="Zdjecia/Alan_Shepard.jpg">
+    <style type="text/css">
+        #parallax-bg {
+            transform: translateZ(0); /* lub w JS dodaj jako fallback */
+        }
+    </style>
     <script>
         //------------- TABLICA LUDZIE ----------------
         const osoby = {
@@ -618,7 +623,7 @@ img.onload = () => {
 
     function updateParallax() {
         // Efekt paralaksy tła
-        const offset = lastScrollY * 0.5;
+        const offset = lastScrollY * 0.3;
         parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
 
         // Przesuwanie przycisków w górę
