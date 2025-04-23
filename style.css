@@ -34,3 +34,81 @@ h2, .teko-headings {
 /*.dot.active {
     transform: scale(1.5);
 }*/
+@media (max-width: 768px) {
+    .show-text-btn {
+        display: block;
+    }
+    .text-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .show-text-btn {
+        display: none;
+    }
+    .text-lg {
+        display: block;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+}
+#galleryList {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#galleryList li {
+    flex: 0 0 auto;
+    width: 80vw;
+}
+
+@media (max-width: 768px) {
+    #galleryList li {
+        width: 100vw;
+    }}
+
+@media (max-width: 768px) {
+    #galleryList li {
+        background-size: contain;
+    }
+}
+.slide-up-container {
+    transition: transform 0.5s ease, top 0.5s ease;
+    position: relative;
+}
+
+ .slide-up {
+    top: 30% !important; 
+    transition: top 0.5s ease-in-out;
+  }
+
+  .slide-text.visible {
+    display: block !important;
+  }
+
+  @media (min-width: 768px) {
+    .slide-up {
+      top: 50% !important;
+    }
+  }
