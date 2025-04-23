@@ -34,32 +34,17 @@ h2, .teko-headings {
 /*.dot.active {
     transform: scale(1.5);
 }*/
-@media (max-width: 768px) {
-    .show-text-btn {
-        display: block;
-    }
-    .text-lg {
-        display: none;
-    }
-}
 
-@media (min-width: 769px) {
-    .show-text-btn {
-        display: none;
-    }
-    .text-lg {
-        display: block;
-    }
-}
 
-.hidden {
+/*css do galerii sław na małych ekranach*/
+/*.hidden {
     display: none;
 }
 
 .visible {
     display: block;
     animation: slideUp 0.5s ease-in-out;
-}
+} <---- chyba nie potrzebne*/
 
 @keyframes slideUp {
   from {
@@ -71,28 +56,26 @@ h2, .teko-headings {
     transform: translateY(0);
   }
 }
-}
+
 #galleryList {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 #galleryList li {
-    flex: 0 0 auto;
-    width: 80vw;
+    flex: 0 0 auto;
+    width: 80vw;
 }
-
-@media (max-width: 768px) {
-    #galleryList li {
-        width: 100vw;
-    }}
 
 @media (max-width: 768px) {
     #galleryList li {
-        background-size: contain;
+        width: 100vw;
+        background-size:cover;
+        background-position: top;
     }
 }
+
 .slide-up-container {
     transition: transform 0.5s ease, top 0.5s ease;
     position: relative;

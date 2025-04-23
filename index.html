@@ -119,8 +119,8 @@
 		</button>
 		<!-- zdjęcia w galerii -->
         <div>
-            <ul class="gallery-list p-4 flex gap-4 overflow-x-auto overflow-y-hidden h-[90vh] snap-x snap-mandatory scroll-smooth -mx-4">
-              <li style="background-image:url('galeria_slaw_zdjecia/kopernik.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+            <ul id="galleryList" class="p-4 flex gap-4 overflow-x-auto overflow-y-hidden h-[90vh] snap-x snap-mandatory scroll-smooth -mx-4">
+              <li id="firstItem" style="background-image:url('galeria_slaw_zdjecia/kopernik.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
               <div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded w-full top-[60%] md:top-[50%]">
                      <p class="teko-headings-small text-3xl mt-4 mb-2 md:text-4xl">Mikołaj Kopernik (1473–1543)</p>
                      <hr class="my-4" style="height:2px; border-width:0; background-color:black">
@@ -160,7 +160,7 @@
                      <button class="show-text-btn mt-4 bg-white text-black p-2 rounded md:hidden">Więcej →</button>
               </div>
               </li>
-              <li style="background-image:url('galeria_slaw_zdjecia/musk.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
+              <li id="lastItem" style="background-image:url('galeria_slaw_zdjecia/musk.jpg');" class="min-w-[80vw] rounded snap-center md:bg-cover bg-center bg-no-repeat">
               <div class="relative inset-0 p-4 bg-white lg:left-32 lg:float-left lg:top-1/2 overflow-hidden lg:w-[400px] h-auto text-black rounded w-full top-[60%] md:top-[50%]">
                      <p class="teko-headings-small text-3xl mt-4 mb-2 md:text-4xl">Elon Musk (ur. 1971)</p>
                      <hr class="my-4" style="height:2px; border-width:0; background-color:black">
@@ -268,9 +268,10 @@
 		</script>
 
 	  </section>	
+	<!--SKRYPT DO OTWIERANIA "WIĘCEJ"-->
 	<script>
- document.querySelectorAll('.show-text-btn').forEach(button => {
-    button.addEventListener('click', () => {
+ 	document.querySelectorAll('.show-text-btn').forEach(button => {
+    	button.addEventListener('click', () => {
         const container = button.closest('div'); // блок, що містить текст
         const text = container.querySelector('.slide-text');
 
@@ -290,43 +291,7 @@
     });
 });
 </script>
-	<script>
-    document.querySelectorAll('.show-text-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const container = button.closest('div'); // блок, що містить текст
-        const text = container.querySelector('.slide-text');
 
-        if (!text || !container) return;
-
-        const isVisible = text.classList.contains('visible');
-
-        if (isVisible) {
-            text.classList.remove('visible');
-            text.classList.add('hidden');
-            container.classList.remove('slide-up');
-        } else {
-            text.classList.remove('hidden');
-            text.classList.add('visible');
-            container.classList.add('slide-up');
-        }
-    });
-});
-
-const slider = document.getElementById('galleryList');
-const items = slider.querySelectorAll('li');
-const itemWidth = items[0].offsetWidth + 16; // item width + gap (Tailwind gap-4 = 1rem = 16px)
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-// Strzałki
-prevBtn.addEventListener('click', () => {
-    slider.scrollLeft -= itemWidth;
-});
-
-nextBtn.addEventListener('click', () => {
-    slider.scrollLeft += itemWidth;
-});
-</script>
 
 	<!---------- QUIZ ----------->
 	<section id="quiz" class="h-screen px-6 py-4">
