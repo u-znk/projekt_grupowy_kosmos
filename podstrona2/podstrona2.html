@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osiągnięcia Technologiczne</title>
+    <link rel="icon" type="image/x-icon" href="../amongus.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss"></style>
+
+</head>
+
+<body>
+    <!---------- NAVIGATION ---------->
+    <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
+        <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
+    
+            <!-- Lewa strona: Logo -->
+            <div>
+                <a href="../index.html" class="flex items-center text-white lg:text-base text-lg">
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Wróć na
+                    <svg class="w-4 h-4 lg:w-6 lg:h-6 mx-2 text-white" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <polygon fill="currentColor" points="154.219,205.188 166.219,335.031 110.922,405.563 96.406,296.563 "></polygon> <polygon fill="currentColor" points="357.781,205.188 345.766,335.031 401.063,405.563 415.594,296.563 "></polygon> <path fill="currentColor" d="M323.813,62.219C305.125,23.328,275.656,0,256,0s-49.125,23.344-67.813,62.219H323.813z"></path> <path fill="currentColor" d="M331.328,80.469H180.672c-6.641,19.156-10.594,41.094-10.047,65.188 c1.609,69.063,18.047,190.984,18.047,190.984l122.641-0.016l12,0.016c0,0,16.453-121.938,18.031-190.984 C341.922,121.563,337.969,99.609,331.328,80.469z M256,231.031c-23.578,0-42.688-19.094-42.688-42.672s19.125-42.672,42.688-42.672 s42.672,19.094,42.656,42.672C298.672,211.938,279.563,231.031,256,231.031z"></path> <path fill="currentColor" d="M429.516,512c-6.109-17.594-22.859-30.219-42.531-30.219c-6.297,0-12.297,1.281-17.766,3.625 c-1.875-20.578-19.188-36.688-40.25-36.688c-3.047,0-6,0.328-8.844,0.969c0.031-0.563,0.031-1.125,0.031-1.688 c0-15.531-12.594-28.125-28.125-28.125c-4.031,0-7.875,0.844-11.344,2.375c-9.734-17.219-12.563-62.156-12.563-62.156h-25.5 c0,0-3.266,49.344-14.813,65.688c-2.688-1.094-5.656-1.688-8.75-1.688c-13.016,0-23.563,10.547-23.563,23.563 c0,0.984,0.063,1.953,0.188,2.906c-3.719-1.203-3.281-1.844-7.406-1.844c-16.484,0-30.531,10.406-35.938,25 c-6.047-2.516-12.672-3.906-19.625-3.906c-25.156,0-46.063,18.219-50.234,42.188H429.516z"></path> </g> </g></svg>
+                    <span class="inline-block lg:text-xl text-xs" id="nazwa">Droga do gwiazd</span>
+                </a>
+            </div>
+
+            <!-- Hamburger - widoczny tylko na małych ekranach -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+
+            <!-- Menu na dużych ekranach -->
+            <ul id="menu" class="hidden md:flex items-center space-x-6 text-lg">
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#newest">
+                            <span class="block lg:hidden">Najnowsze</span>
+                            <span class="hidden lg:inline">Najnowsze wydarzenia</span>
+                        </a>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#oldest">
+                            <span class="block lg:hidden">Najstarsze</span>
+                            <span class="hidden lg:inline">Najstarsze wydarzenia</span>
+                        </a>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                        <button>
+                        <a href="#info">
+                            <span class="block lg:hidden">Informacje</span>
+                            <span class="hidden lg:inline">Informacje dodatkowe</span>
+                        </a>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Menu mobilne -->
+        <ul id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-4 text-lg">
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <button>
+                    <a href="#newest">Najnowsze wydarzenia</a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
+                    <button>
+                    <a href="#oldest">Najstarsze wydarzenia</a>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
+                    <a href="#info">Informacje dodatkowe</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!---------- HEADER ------------->
+    <section class="relative bg-black bg-cover bg-top bg-no-repeat bg-scroll text-white flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('header_os-tech_2.jpg');">
+        <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6">
+            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Osiągnięcia <br>technologiczne</h1>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
+    </section>
+
+    <!--------------TREŚĆ------------>
+    <section class="bg-black">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-2">
+            <div class="w-auto">
+              <button class="img-tile bg-gray-200 p-8 w-[200px] aspect-video flex items-center justify-center transition hover:bg-white">
+                🚀
+              </button>
+            </div>
+            <div class="">
+              <div class="text-box bg-gray-200 p-6 font-semibold text-center hidden">
+                Rakieta Falcon Heavy wystartowała z misją na Marsa.
+              </div>
+            </div>
+          </div>
+        
+          <!-- Kafelek 2 -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+            <div class="w-full md:w-1/2">
+              <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
+                ☄️
+              </button>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="text-box bg-gray-900 rounded-xl p-6 text-xl font-semibold text-center hidden">
+                Nowa kometa odkryta w Układzie Słonecznym.
+              </div>
+            </div>
+          </div>
+        
+          <!-- Kafelek 3 -->
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="w-full md:w-1/2">
+              <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
+                🤖
+              </button>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="text-box bg-gray-900 rounded-xl p-6 text-xl font-semibold text-center hidden">
+                Łazik Perseverance zebrał próbki z marsjańskiej gleby.
+              </div>
+            </div>
+          </div>
+
+        <script>
+        const imageTiles = document.querySelectorAll(".img-tile");
+        const textBoxes = document.querySelectorAll(".text-box");
+        imageTiles.forEach(tile => {
+            tile.addEventListener("click", () => {
+                const relatedTextBox =
+                    tile.parentElement.nextElementSibling?.querySelector(".text-box") ||
+                    tile.parentElement.previousElementSibling?.querySelector(".text-box");
+                const isHidden = relatedTextBox.classList.contains("hidden");
+                textBoxes.forEach(box => box.classList.add("hidden"));
+                if (isHidden) {
+                    relatedTextBox.classList.remove("hidden");
+                }
+            });
+        });
+        </script>
+
+    </section>
+
+    <!---------- STOPKA ---------->
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('../moon.jpg');">
+        <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
+        <p>Autorki:</p>
+        <div class="flex items-center justify-between px-6 w-full">
+            <ul class="py-4">
+                <li>Aleksandra Gwóźdź</li>
+                <li>Urszula Ziarnek</li>
+                <li>Paulina Ziółkowska</li>
+                <li>Sasha Yablonska</li>
+            </ul>
+        </div>
+  
+        <!-- Link do źródeł w prawym dolnym rogu -->
+        <a target="blank" href="../zrodla.html" class="text-sm absolute bottom-4 right-6 underline">Zobacz źródła</a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,  // czas animacji
+            once: false,    // animacja przy każdej zmianie widoku
+            mirror: true    // animacja w obie strony (wejście i wyjście)
+        });
+    </script>
+
+</body>
+</html>
