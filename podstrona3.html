@@ -33,18 +33,18 @@
     <script>
         //------------- TABLICA LUDZIE ----------------
         const osoby = {
-            "Neil_Armstrong": ["Neil", "Armstrong", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Neil_Armstrong.jpg'>"],
-            "Jurij_Gagarin": ["Jurij", "Gagarin", "09.03.1934","27.03.1968", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Jurij_Gagarin.jpg'>"],
-            "Buzz_Aldrin": ["Buzz", "Aldrin", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Buzz_Aldrin.jpg'>"],
-            "John_Glenn": ["John", "Glenn", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/John_Glenn.jpg'>"],
-            "Valentina_Tierieszkowa": ["Valentina", "Tierieszkowa", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Valentina_Tierieszkowa.jpg'>"],
-            "Chris_Hadfield": ["Chris", "Hadfield", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Chris_Hadfield.jpg'>"],
-            "Miroslaw_Hermaszewski": ["Mirosław", "Hermaszewski", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Miroslaw_Hermaszewski.jpg'>"],
-            "Sally_Ride": ["Sally", "Ride", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/Sally_Ride.jpg'>"],
-            "Aleksiej_Leonow": ["Aleksiej", "Leonow", "05.07.1930", "25.07.2012", "Amerykański astronauta, dowódca misji Apollo 11. 21 lipca 1969 jako pierwszy człowiek stanął na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Aleksiej_Leonow.jpg'>"],
-            "Peggy_Whitson": ["Peggy", "Whitson", "data_ur_osoby_2","data_sm_osoby_2", "opis osoby 2","<img class='object-cover w-full h-full' src='Zdjecia/Peggy_Whitson.jpg'>"],
-            "Yang_Liwei": ["Yang", "Liwei", "data_ur_osoby_3","data_sm_osoby_3", "opis osoby 3","<img class='object-cover w-full h-full' src='Zdjecia/Yang_Liwei.jpg'>"],
-            "Alan_Shepard": ["Alan", "Shepard", "data_ur_osoby_4","", "opis osoby 4","<img class='object-cover w-full h-full' src='Zdjecia/Alan_Shepard.jpg'>"]
+            "Neil_Armstrong": ["Neil", "Armstrong", "05.07.1930", "25.07.2012", 'Pierwszy człowiek, który postawił stopę na Księżycu podczas misji Apollo 11 w 1969 roku. Jego słowa <b>"To jest mały krok dla człowieka, ale wielki skok dla ludzkości"</b> przeszły do historii.',"<img class='object-cover w-full h-full' src='Zdjecia/Neil_Armstrong.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Jurij_Gagarin": ["Jurij", "Gagarin", "09.03.1934","27.03.1968", "Pierwszy człowiek w kosmosie. 12 kwietnia 1961 roku odbył lot na pokładzie statku Wostok 1, okrążając Ziemię w ciągu 108 minut. Zginął tragicznie w katastrofie lotniczej podczas lotu treningowego","<img class='object-cover w-full h-full' src='Zdjecia/Jurij_Gagarin.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Buzz_Aldrin": ["Buzz", "Aldrin", "20.01.1930","", "Drugi człowiek na Księżycu podczas misji Apollo 11. Po zakończeniu kariery astronauty aktywnie promował eksplorację kosmosu i edukację naukową.","<img class='object-cover w-full h-full' src='Zdjecia/Buzz_Aldrin.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "John_Glenn": ["John", "Glenn", "18.07.1921","08.12.2016", "Pierwszy Amerykanin, który okrążył Ziemię w 1962 roku na pokładzie statku Friendship 7. W 1998 roku, w wieku 77 lat, został najstarszym człowiekiem w kosmosie podczas misji STS-95.","<img class='object-cover w-full h-full' src='Zdjecia/John_Glenn.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Valentina_Tierieszkowa": ["Valentina", "Tierieszkowa", "06.03.1937", "", "Pierwsza kobieta w kosmosie. 16 czerwca 1963 roku odbyła samotny lot na pokładzie statku Wostok 6, okrążając Ziemię 48 razy w ciągu prawie 3 dni.","<img class='object-cover w-full h-full' src='Zdjecia/Valentina_Tierieszkowa.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Chris_Hadfield": ["Chris", "Hadfield", "29.08.1959","", "Pierwszy Kanadyjczyk, który dowodził Międzynarodową Stacją Kosmiczną (ISS) podczas Ekspedycji 35 w 2013 roku. Znany z popularyzacji nauki poprzez media społecznościowe i muzykę w kosmosie.","<img class='object-cover w-full h-full' src='Zdjecia/Chris_Hadfield.jpg'>","<img class='h-8 w-8' src='Zdjecia/Kanada.png'>"],
+            "Miroslaw_Hermaszewski": ["Mirosław", "Hermaszewski", "15.09.1941","12.12.2022", "Pierwszy i jedyny Polak w kosmosie. W 1978 roku uczestniczył w misji Sojuz 30, spędzając 8 dni na pokładzie stacji Salut 6.","<img class='object-cover w-full h-full' src='Zdjecia/Miroslaw_Hermaszewski.jpg'>","<img class='h-8 w-8' src='Zdjecia/Polska.png'>"],
+            "Sally_Ride": ["Sally", "Ride", "26.05.1951","23.07.2012", "Pierwsza Amerykanka w kosmosie. W 1983 roku uczestniczyła w misji STS-7 na pokładzie promu Challenger. Była również aktywną promotorką edukacji naukowej.","<img class='object-cover w-full h-full' src='Zdjecia/Sally_Ride.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Aleksiej_Leonow": ["Aleksiej", "Leonow", "30.05.1934", "11.10.2019", "Pierwszy człowiek, który odbył spacer kosmiczny w 1965 roku podczas misji Woschod 2. Jego wyczyn był kamieniem milowym w historii eksploracji kosmosu.","<img class='object-cover w-full h-full' src='Zdjecia/Aleksiej_Leonow.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Peggy_Whitson": ["Peggy", "Whitson", "09.02.1960","", "Pierwsza kobieta, która dowodziła Międzynarodową Stacją Kosmiczną (ISS). Rekordzistka wśród kobiet pod względem łącznego czasu spędzonego w kosmosie oraz liczby spacerów kosmicznych.","<img class='object-cover w-full h-full' src='Zdjecia/Peggy_Whitson.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Yang_Liwei": ["Yang", "Liwei", "21.06.1965","", "Pierwszy obywatel Chin w kosmosie. 15 października 2003 roku odbył samotny lot na pokładzie statku Shenzhou 5, stając się pionierem chińskiego programu załogowych lotów kosmicznych.","<img class='object-cover w-full h-full' src='Zdjecia/Yang_Liwei.jpg'>","<img class='h-8 w-8' src='Zdjecia/Chiny.png'>"],
+            "Alan_Shepard": ["Alan", "Shepard", "18.11.1923","21.07.1998", "Pierwszy Amerykanin w kosmosie. 5 maja 1961 roku odbył suborbitalny lot na pokładzie statku Freedom 7. W 1971 roku dowodził misją Apollo 14 i został piątym człowiekiem, który postawił stopę na Księżycu.","<img class='object-cover w-full h-full' src='Zdjecia/Alan_Shepard.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"]
         };
         //------------- FUNKCJA LUDZIE ----------------
         function wyswietlOsobe(imie) {
@@ -100,8 +100,8 @@
                 document.getElementById('data_sm').innerHTML = "";
             }
             document.getElementById('opis').innerHTML = dane[4] + " ";
-            document.getElementById('zdjecie').innerHTML = dane[5] + " ";
-
+            document.getElementById('zdjecie').innerHTML = dane[5];
+            document.getElementById('flaga').innerHTML = dane[6];
         }
 
         function wyswietlOsobeTel(){
@@ -113,26 +113,58 @@
         }
         //------------- TABLICA ZWIERZĘTA ------------------
         const zwierzeta = {
-            "Zwierze1": ["Nazwa1", "Gatunek1", "opis1","<img class='object-cover w-full h-full' src='laika.jpg'>"],
-            "Zwierze2": ["Nazwa2", "Gatunek2", "opis2","<img class='object-cover w-full h-full' src='laika.jpg'>"],
-            "Zwierze3": ["Nazwa3", "Gatunek3", "opis3","<img class='object-cover w-full h-full' src='laika.jpg'>"],
-            "Zwierze4": ["Nazwa4", "Gatunek4", "opis4","<img class='object-cover w-full h-full' src='laika.jpg'>"]
+            "Lajka": ["Łajka", "Pies", "Pierwsze zwierzę na orbicie Ziemi (Sputnik 2, 1957). Niestety nie przeżyła misji – zmarła z przegrzania kilka godzin po starcie. Jej lot dostarczył cennych danych o możliwościach przetrwania organizmu żywego w przestrzeni kosmicznej.","<img class='object-cover w-full h-full' src='Zdjecia/Łajka.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Ham": ["Ham", "Szympans", "Pierwszy człowiekowaty, który przeprowadził zadania w kosmosie (Mercury-Redstone 2, 1961). Udało się go bezpiecznie sprowadzić na Ziemię – stał się symbolem sukcesu programu kosmicznego NASA.","<img class='object-cover w-full h-full' src='Zdjecia/Ham.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Felicette": ["Félicette", "Kot", "Jedyny kot w kosmosie (1963). Wystrzelona przez Francję, powróciła bezpiecznie na Ziemię. Była częścią eksperymentów neurologicznych. Upamiętniona po latach pomnikiem.","<img class='object-cover w-full h-full' src='Zdjecia/Felicette.webp'>","<img class='h-8 w-8' src='Zdjecia/Francja.png'>"],
+            "Albert_II": ["Albert II", "Makak rezus", "Pierwsza małpa w przestrzeni kosmicznej (1949), osiągnął granicę kosmosu (ponad 100 km). Niestety zginął podczas upadku kapsuły z powodu awarii spadochronu.","<img class='object-cover w-full h-full' src='Zdjecia/Albert_II.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Bielka_i_Strielka": ["Biełka i Striełka", "Psy", "Pierwsze zwierzęta, które spędziły dzień na orbicie i bezpiecznie wróciły (Sputnik 5, 1960). Stały się bohaterkami narodowymi – Striełka została nawet matką szczeniaka podarowanego Jacqueline Kennedy.","<img class='object-cover w-full h-full' src='Zdjecia/Biełka_i_Striełka.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Enos": ["Enos", "Szympans", "Pierwszy szympans na orbicie (Mercury-Atlas 5, 1961). Wykonał dwie orbity, choć misja miała być dłuższa – skrócono ją z powodu usterek. Powrócił żywy.","<img class='object-cover w-full h-full' src='Zdjecia/Enos.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Miss_Sam_i_Sam": ["Miss Sam i Sam", "Makaki rezusy", "Część testów kapsuły Mercury. Miss Sam (1960) i Sam (1959) mieli sprawdzić wpływ przeciążeń i zachowanie kapsuły. Obie misje zakończyły się sukcesem.","<img class='object-cover w-full h-full' src='Zdjecia/Miss_Sam_i_Sam.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Miss_Baker": ["Miss Baker", "Małpa wiewiórcza", "Jedno z pierwszych zwierząt, które przetrwały lot suborbitalny (1959). Latała z małpką o imieniu Able. Po powrocie została celebrytką – żyła jeszcze wiele lat.","<img class='object-cover w-full h-full' src='Zdjecia/Miss_Baker.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Dezik_and_Tsygan": ["Dezik i Cygan", "Psy", "Pierwsze psy w kosmosie (1951), choć nie osiągnęły orbity. Cygan przeżył i był pierwszym zwierzęciem, które wróciło żywe z granicy kosmosu. Dezik zginął podczas kolejnego lotu.","<img class='object-cover w-full h-full' src='Zdjecia/Dezik_and_Tsygan.jpg'>","<img class='h-8 w-8' src='Zdjecia/ZSRR.png'>"],
+            "Muszki_Owocowki": ["Muszki Owocówki", "Muszka owocowa", "Pierwsze żywe organizmy w przestrzeni kosmicznej (1947). Badano na nich wpływ promieniowania kosmicznego. Misja zakończyła się sukcesem – wróciły na Ziemię.","<img class='object-cover w-full h-full' src='Zdjecia/Muszki_Owocówki.png'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Arabella": ["Arabella", "Krzyżak ogrodowy", "Wysłana w ramach programu Skylab (1973), by badać, jak pająki tkają pajęczyny w stanie nieważkości. Początkowo miała problemy, ale udało jej się przystosować.","<img class='object-cover w-full h-full' src='Zdjecia/Arabella.jpg'>","<img class='h-8 w-8' src='Zdjecia/Stany_Zjednoczone.png'>"],
+            "Hector": ["Hector", "Szczur", "Pierwszy francuski szczur w kosmosie, wystrzelony w 1961 roku na pokładzie rakiety Véronique. Jego lot był suborbitalny – osiągnął wysokość ponad 100 km. Hector bezpiecznie wrócił na Ziemię i przyczynił się do rozwoju francuskiego programu kosmicznego.","<img class='object-cover w-full h-full' src='Zdjecia/Hector.jpg'>","<img class='h-8 w-8' src='Zdjecia/Francja.png'>"]
         }
         //-------------- FUNKCJA ZWIERZĘTA -----------------
         function wyswietlZwierze(nazwa_zwierzecia) {
             let dane;
             switch (nazwa_zwierzecia) {
-                case "Zwierze1":
-                    dane = zwierzeta.Zwierze1;
+                case "Lajka":
+                    dane = zwierzeta.Lajka;
                     break;
-                case "Zwierze2":
-                    dane = zwierzeta.Zwierze2;
+                case "Ham":
+                    dane = zwierzeta.Ham;
                     break;
-                case "Zwierze3":
-                    dane = zwierzeta.Zwierze3;
+                case "Felicette":
+                    dane = zwierzeta.Felicette;
                     break;
-                case "Zwierze4":
-                    dane = zwierzeta.Zwierze4;
+                case "Albert_II":
+                    dane = zwierzeta.Albert_II;
+                    break;
+                case "Bielka_i_Strielka":
+                    dane = zwierzeta.Bielka_i_Strielka;
+                    break;
+                case "Enos":
+                    dane = zwierzeta.Enos;
+                    break;
+                case "Miss_Sam_i_Sam":
+                    dane = zwierzeta.Miss_Sam_i_Sam;
+                    break;
+                case "Miss_Baker":
+                    dane = zwierzeta.Miss_Baker;
+                    break;
+                case "Dezik_and_Tsygan":
+                    dane = zwierzeta.Dezik_and_Tsygan;
+                    break;
+                case "Muszki_Owocowki":
+                    dane = zwierzeta.Muszki_Owocowki;
+                    break;
+                case "Arabella":
+                    dane = zwierzeta.Arabella;
+                    break;
+                case "Hector":
+                    dane = zwierzeta.Hector;
                     break;
                 default:
                     dane = ["Nieznana", "Nieznany", "Brak informacji",""];
@@ -141,7 +173,8 @@
             document.getElementById('nazwa_zwierzecia').innerHTML = dane[0] + " ";
             document.getElementById('gatunek_zwierzecia').innerHTML = dane[1] + " ";
             document.getElementById('opis_zwierzecia').innerHTML = dane[2] + " ";
-            document.getElementById('zdjecie_zwierzecia').innerHTML = dane[3] + " ";
+            document.getElementById('zdjecie_zwierzecia').innerHTML = dane[3];
+            document.getElementById('flaga_zwierzecia').innerHTML = dane[4];
 
         }
 
@@ -175,9 +208,14 @@
                                     <p class="max-w-full break-words" id="nazwisko"></p>
                                 </div>
                                 <hr class="border-2 border-white w-full">
-                                <div class="justify-center flex items-center w-full">
-                                    <p class="text-center my-4 flex items-center" id="data_ur"></p>
-                                    <p class="text-center my-4 flex items-center" id="data_sm"></p>
+                                <div class='justify-center flex items-center w-full'>
+                                    <div id="flaga" class='justify-center flex items-center w-1/6'>
+                                        
+                                    </div>
+                                    <div class="justify-center flex items-center w-5/6 font-semibold ">
+                                        <p class="text-center my-4 flex items-center" id="data_ur"></p>
+                                        <p class="text-center ml-2 my-4 flex items-center" id="data_sm"></p>
+                                    </div>
                                 </div>
                                 <p class="text-justify my-4" id="opis"></p>
                             </div>
@@ -330,11 +368,14 @@
                         <div class="w-80 h-80 ">
                             <hr class="border-2 border-white w-full">
                             <div id="nazwa" class="justify-center flex items-center w-full my-2 text-3xl flex-wrap">
-                                <p class="pr-2 max-w-full break-words" id="nazwa_zwierzecia"></p>
+                                <p class="pr-2 max-w-full break-words w-full text-center" id="nazwa_zwierzecia"></p>
                             </div>
                             <hr class="border-2 border-white w-full">
                             <div class="justify-center flex items-center w-full">
-                                <p class="text-center my-4 flex items-center" id="gatunek_zwierzecia"></p>
+                                <div id="flaga_zwierzecia" class='justify-center flex items-center w-1/6'></div>
+                                <div class="w-5/6 justify-center flex mr-12">
+                                    <p class="text-center my-4 flex items-center justify-center w-full font-semibold text-lg" id="gatunek_zwierzecia"></p>
+                                </div>
                             </div>
                             <p class="text-justify my-4" id="opis_zwierzecia"></p>
                         </div>
@@ -347,122 +388,122 @@
                             <b>Zwierzęta, które pomogły zdobywać kosmos</b>
                         </h3>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Łajka.jpg');" onclick="wyswietlZwierze('Lajka'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Łajka</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-right" style="background-image: url('Zdjecia/Ham.jpg');" onclick="wyswietlZwierze('Ham'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Ham</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Felicette.webp');" onclick="wyswietlZwierze('Felicette'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Félicette</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-left" style="background-image: url('Zdjecia/Albert_II.jpg');" onclick="wyswietlZwierze('Albert_II'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Albert II</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Biełka_i_Striełka.jpg');" onclick="wyswietlZwierze('Bielka_i_Strielka'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Biełka i Striełka</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Enos.jpg');" onclick="wyswietlZwierze('Enos'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Enos</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Miss_Sam_i_Sam.jpg');" onclick="wyswietlZwierze('Miss_Sam_i_Sam'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Miss Sam i Sam</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Miss_Baker.jpg');" onclick="wyswietlZwierze('Miss_Baker'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Miss Baker</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Dezik_and_Tsygan.jpg');" onclick="wyswietlZwierze('Dezik_and_Tsygan'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Dezik i Cygan</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('Zdjecia/Muszki_Owocówki.png');" onclick="wyswietlZwierze('Muszki_Owocowki'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Muszki owocówki</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-center" style="background-image: url('Zdjecia/Arabella.jpg');" onclick="wyswietlZwierze('Arabella'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Arabella</b>
                                 </span>
                             </button>
                         </a>
                         <a href="#tresc" class="group" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="600">
-                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center" style="background-image: url('laika.jpg');" onclick="wyswietlZwierze('Zwierze1'); wyswietlZwierzeTel();">
+                            <button class="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-cover lg:m-4 m-[10px] rounded-full transition-all duration-300 lg:hover:scale-125 hover:shadow-lg relative flex items-center justify-center bg-left" style="background-image: url('Zdjecia/Hector.jpg');" onclick="wyswietlZwierze('Hector'); wyswietlZwierzeTel();">
                                 <!-- Tło: ściemnia się zawsze na telefonie, po hoverze na komputerze -->
                                 <div class="absolute inset-0 transition-all duration-300 rounded-full bg-black bg-opacity-30 lg:bg-transparent lg:group-hover:bg-black lg:group-hover:bg-opacity-50"></div>
                                 <!-- Tekst: zawsze widoczny na telefonie, pojawia się na hoverze na komputerze -->
                                 <span class="absolute text-white text-[11px] transition-opacity duration-300 bg-transparent px-2 py-1 rounded-lg top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100">
-                                    <b>Laika</b>
+                                    <b>Hector</b>
                                 </span>
                             </button>
                         </a>
@@ -470,7 +511,7 @@
                 </div>
             `;
 
-            wyswietlZwierze('Zwierze1');
+            wyswietlZwierze('Lajka');
         }
          window.onload = function() {
             ludzie();
@@ -665,11 +706,11 @@ img.onload = () => {
         </div>
     </section>
     <!---------- STOPKA ---------->
-    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('moon.jpg');">
-        <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
-        <p>Autorki:</p>
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4 overflow-hidden" style="background-image: url('moon.jpg');">
+        <h2 class="py-6 text-4xl" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">Informacje dodatkowe</h2>
+        <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">Autorki:</p>
         <div class="flex items-center justify-between px-6 w-full">
-            <ul class="py-4">
+            <ul class="py-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">
                 <li>Aleksandra Gwóźdź</li>
                 <li>Urszula Ziarnek</li>
                 <li>Paulina Ziółkowska</li>
