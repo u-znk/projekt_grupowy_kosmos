@@ -9,7 +9,115 @@
     <link rel="stylesheet" href="../style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss"></style>
+
+    <style type="text/tailwindcss">
+        @keyframes orbitWobble {
+          0%   { transform: translateX(0) translateY(0); }
+          25%  { transform: translateX(6px) translateY(-6px); }
+          50%  { transform: translateX(0) translateY(0); }
+          75%  { transform: translateX(-6px) translateY(6px); }
+          100% { transform: translateX(0) translateY(0); }
+        }
+        .planet-orbit {
+          animation-name: orbitWobble;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+        }
+        @keyframes sunPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.015);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .sun-pulse{
+            animation-name: sunPulse;
+            animation: sunPulse 2s infinite;
+            background-image: radial-gradient(rgb(255, 252, 67), rgb(255, 158, 12), rgb(189, 52, 11));
+        }
+        @keyframes pulse-ring {
+            0% {
+                transform: translate(-50%, -50%) scale(0.9);
+                opacity: 0.6;
+            }
+            70% {
+                transform: translate(-50%, -50%) scale(1.4);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(0.9);
+                opacity: 0;
+            }
+        }
+        .activePlanet{
+            position: relative;
+            z-index: 0;
+        }
+        .activePlanet::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            border-radius: 1000px;
+            background-color: rgba(255, 255, 255, 0.15);
+            animation: pulse-ring 1.5s infinite;
+            z-index: -1;
+        }
+        .activeBigPlanet{
+            position: relative;
+            z-index: 0;
+        }
+        .activeBigPlanet::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            border-radius: 1000px;
+            background-color: rgba(255, 255, 255, 0.15);
+            animation: pulse-ring 1.5s infinite;
+            z-index: -1;
+        }
+        .activeHugePlanet{
+            position: relative;
+            z-index: 0;
+        }
+        .activeHugePlanet::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            border-radius: 1000px;
+            background-color: rgba(255, 255, 255, 0.15);
+            animation: pulse-ring 1.5s infinite;
+            z-index: -1;
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-fadeInScale {
+            animation: fadeInScale 0.4s ease-out forwards;
+        }
+    </style>
 
 </head>
 
@@ -38,9 +146,8 @@
                 <li>
                     <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
                         <button>
-                        <a href="#newest">
-                            <span class="block lg:hidden">Najnowsze</span>
-                            <span class="hidden lg:inline">Najnowsze wydarzenia</span>
+                        <a href="#ukladSloneczny">
+                            <span class="inline">Maszyny w kosmosie</span>
                         </a>
                         </button>
                     </div>
@@ -109,11 +216,11 @@
     </section>
 
     <!--------------TREŚĆ------------>
-    <section class="bg-black">
+    <section id="firmy" class="bg-black">
         <div class="flex flex-col md:flex-row items-center md:items-start gap-2">
             <div class="w-auto">
               <button class="img-tile bg-gray-200 p-8 w-[200px] aspect-video flex items-center justify-center transition hover:bg-white">
-                🚀
+                NASA
               </button>
             </div>
             <div class="">
@@ -127,7 +234,7 @@
           <div class="flex flex-col md:flex-row-reverse items-center gap-6">
             <div class="w-full md:w-1/2">
               <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
-                ☄️
+                ESA
               </button>
             </div>
             <div class="w-full md:w-1/2">
@@ -141,7 +248,7 @@
           <div class="flex flex-col md:flex-row items-center gap-6">
             <div class="w-full md:w-1/2">
               <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
-                🤖
+                itd
               </button>
             </div>
             <div class="w-full md:w-1/2">
@@ -167,8 +274,101 @@
             });
         });
         </script>
+    
+</section>
+<section id="ukladSloneczny" class="bg-black h-full px-6 pt-4 pb-14">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-7 text-white">
+        <h2 class="py-6 text-4xl">Maszyny w kosmosie</h2>
+        <p class="lg:collapse text-lg">Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</p>
+    </div>
+    <div class="bg-black text-white flex flex-col items-center justify-center space-y-8 p-6">
+        <div class="flex flex-col items-center justify-evenly gap-10 lg:flex-row lg:items-center lg:flex-wrap">
+          <div data-planet="Słońce" class="planet sun-pulse w-[500px] h-[500px] bg-orange-500 rounded-full cursor-pointer"></div>
+          <div data-planet="Merkury" class="planet planet-orbit animate-[orbitWobble_6s_infinite] w-[50px] h-[50px] bg-[#929785] rounded-full cursor-pointer"></div>
+          <div data-planet="Wenus" class="planet planet-orbit animate-[orbitWobble_7s_infinite] w-[90px] h-[90px] bg-[#ff8818] rounded-full cursor-pointer"></div>
+          <div data-planet="Ziemia" class="planet planet-orbit animate-[orbitWobble_8s_infinite] w-[90px] h-[90px] bg-gradient-to-b from-green-500 to-blue-500 rounded-full cursor-pointer"></div>
+          <div data-planet="Mars" class="planet planet-orbit animate-[orbitWobble_9s_infinite] w-[60px] h-[60px] bg-[#d83e23] rounded-full cursor-pointer"></div>
+          <div data-planet="Jowisz" class="planet planet-orbit animate-[orbitWobble_10s_infinite] w-[200px] h-[200px] bg-yellow-400 bg-gradient-to-b from-yellow-500 via-zinc-300 to-orange-400 rounded-full cursor-pointer"></div>
+          <div data-planet="Saturn" class="planet planet-orbit animate-[orbitWobble_11s_infinite] w-[130px] h-[130px] bg-[#dbbc79] rounded-full ring-offset-8 ring-offset-black ring-[20px] ring-[#dda846] cursor-pointer"></div>
+          <div data-planet="Uran" class="planet planet-orbit animate-[orbitWobble_12s_infinite] w-[100px] h-[100px] bg-[#80d5fd] rounded-full ring-offset-2 ring-offset-black ring-2 ring-[#a7c7f8] cursor-pointer"></div>
+          <div data-planet="Neptun" class="planet planet-orbit animate-[orbitWobble_13s_infinite] w-[100px] h-[100px] bg-[#7b8fff] rounded-full cursor-pointer"></div>
+        </div>
+      
+        <!--Info Textbox -->
+        <div id="planet-info" class="text-left text-lg font-semibold p-5 lg:mx-36 border-[1px] invisible lg:visible">Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</div>
+        </div>
+      
+    <script>
+    const planetFacts = {
+          'Słońce': '<p class="text-center text-yellow-300 pb-2 font-bold text-xl">Słońce</p><p>⦿ <u>Parker Solar Probe</u> (NASA) – sonda najbliżej Słońca, od 2018 bada wiatr słoneczny i koronalne wyrzuty masy;<br>⦿ <u>Solar Orbiter</u> (ESA/NASA) - sonda od 2020 mierząca wiatr słoneczny, badająca magnetosfery i bieguny Słońca.<p>',
+          'Merkury': '<p class="text-center text-[#929785] pb-2 font-bold text-xl">Merkury</p><p>⦿ <u>BepiColombo</u> (ESA/JAXA) - orbiter do badań pola magnetycznego, geologii i atmosfery. Jeszcze nie dotarł na orbitę planety, jego przylot jest prognzowany na 2025 lub 2026;<br>⦿ W przeszłości Merkurego odwiedziły sondy <u>MESSENGER i Mariner 10</u> - obie należące do amerykańskiej NASA.<p>',
+          'Wenus': '<p class="text-center text-[#ff8818] pb-2 font-bold text-xl">Wenus</p><p>⦿ <u>Akatsuki</u> (JAXA) – od 2015 bada atmosferę Wenus, szczególnie superrotację;<br>⦿ <u>Sonda Magellan</u> (NASA) w latach 1989–1994 wykonywała mapy powierzchni oraz mapy pola grawitacyjnego planety.<p>',
+          'Ziemia': '<p class="text-center text-[#52CFB5] pb-2 font-bold text-xl">Ziemia</p><p>⦿ <u>MSK</u> (Międzynarodowa Stacja Kosmiczna) – załogowa stacja badawcza na orbicie Ziemi. Jej głównym zadaniem jest prowadzenie badań w warunkach mikrograwitacji; <br>⦿ Na różnych orbitach Ziemi znajduje się około <u>12 tysięcy satelitów</u> pełniących różne funkcje. Najwięcej, bo ponad 8000 z nich, należy do USA, a na drugim miejscu jest Rosja z ponad 1500 satelitami;<br>⦿ Nowym polskim osiągnięciem w zakresie misji kosmicznych jest ramię <u>TITAN</u>, którego zadaniem ma być przeprowadzane serwisu orbitujących satelit w ramach kontraktu z Europejską Agencją Kosmiczną.<p>',
+          'Mars': '<p class="text-center text-[#d83e23] pb-2 font-bold text-xl">Mars</p><p>⦿ <u>Perseverance</u> (NASA) to łazik od 2021 badający geologię i zbierający próbki;<br>⦿ <u>Ingenuity</u> (NASA) to pierwszy statek powietrzny, który wykonał kontrolowany lot pozaziemski. Dron operował w latach 2021–2024;<br>⦿ Łazik <u>Curiosity</u> (NASA) od 2012 poszukuje odpowiedzi na pytanie, czy na Marsie kiedykolwiek mogło być życie. W Internecie zasłynął z tego, że w 2013 zaszumiał sobie piosenkę na "urodziny".<p>',
+          'Jowisz': '<p class="text-center text-[#DDCFC6] pb-2 font-bold text-xl">Jowisz</p><p>⦿ <u>Juno</u> (NASA) – orbiter badający atmosferę, pole magnetyczne i wnętrze Jowisza (od 2016);<br>⦿ <u>Juice</u> (ESA) - sonda mająca przebadać trzy księżyce Jowisza: Ganimedesa, Kallisto i Europę. Na miejsce dotrze w 2031.<p>',
+          'Saturn': '<p class="text-center text-[#dbbc79] pb-2 font-bold text-xl">Saturn</p><p>⦿ <u>Cassini–Huygens</u> (NASA/ESA/ASI) to sonda, która badała atmosferę, pierścienie i księżyce Saturna. Misję zakończyła w 2017.<p>',
+          'Uran': '<p class="text-center text-[#80d5fd] pb-2 font-bold text-xl">Uran</p><p>⦿ <u>Voyager-2</u> (NASA) to jedyna sonda, która minęła Urana (przelot w 1986) i Neptuna (w 1989). Nadal jest aktywna w przestrzeni międzygwiezdnej.<p>',
+          'Neptun': '<p class="text-center text-[#7b8fff] pb-2 font-bold text-xl">Neptun</p><p>⦿ <u>Voyager-2</u> (NASA) to jedyna sonda, która minęła Urana (przelot w 1986) i Neptuna (w 1989). Nadal jest aktywna w przestrzeni międzygwiezdnej.<p>'
+        };
+      
+    document.querySelectorAll('.planet').forEach(planet => {
+        planet.addEventListener('click', () => {
+            const name = planet.dataset.planet;
+            showInfo(name, planet);
+        });
+    });
 
-    </section>
+    function showInfo(name, element) {
+    const existingInfo = document.querySelector('.dynamic-info');
+    if (existingInfo) existingInfo.remove();
+
+    document.querySelectorAll('.planet').forEach(p => {
+        p.classList.remove('activePlanet', 'activeBigPlanet', 'activeHugePlanet');
+    });
+    if (name === 'Słońce') {
+        element.classList.add('activeHugePlanet');
+    } if (name === 'Jowisz') {
+        element.classList.add('activeBigPlanet');
+    } else {
+        element.classList.add('activePlanet');
+    }
+    
+    const isDesktop = window.innerWidth >= 1024; //animacje fade-in textboxa
+    if (!isDesktop) {
+        const infoBox = document.createElement('div');
+        infoBox.className = "dynamic-info text-left text-lg font-semibold p-5 border-[1px] max-w-xs";
+        infoBox.innerHTML = planetFacts[name];
+        void infoBox.offsetWidth;
+        infoBox.classList.add('animate-fadeInScale');
+        element.insertAdjacentElement('afterend', infoBox);
+    } else {
+        const staticInfoBox = document.getElementById('planet-info');
+        staticInfoBox.classList.remove('animate-fadeInScale');
+        void staticInfoBox.offsetWidth;
+        staticInfoBox.innerHTML = planetFacts[name];
+        staticInfoBox.classList.add('animate-fadeInScale');
+    }}
+
+    window.addEventListener('resize', () => { //reset do default (usuwanie animacji i tekstu) po zmianie rozmiaru ekranu
+        document.querySelectorAll('.dynamic-info').forEach(box => box.remove());
+    if (window.innerWidth >= 1024) {
+        document.getElementById('planet-info').innerHTML = 'Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.';
+        document.querySelectorAll('.planet').forEach(p => {
+            p.classList.remove('activePlanet', 'activeBigPlanet', 'activeHugePlanet');
+        });
+    }
+    });
+    document.addEventListener('click', (event) => { //wygaszenie animacji po naciśnięciu poza planetą
+    const clickedPlanet = event.target.closest('.planet');
+    if (!clickedPlanet) {
+        document.querySelectorAll('.planet').forEach(p => {
+            p.classList.remove('activePlanet', 'activeBigPlanet', 'activeHugePlanet');
+        });
+    }
+    });
+    </script>
+      
+</section>
 
     <!---------- STOPKA ---------->
     <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('../moon.jpg');">
