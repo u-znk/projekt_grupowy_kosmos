@@ -290,7 +290,44 @@
     });
 });
 </script>
-	
+	<script>
+    document.querySelectorAll('.show-text-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const container = button.closest('div'); // блок, що містить текст
+        const text = container.querySelector('.slide-text');
+
+        if (!text || !container) return;
+
+        const isVisible = text.classList.contains('visible');
+
+        if (isVisible) {
+            text.classList.remove('visible');
+            text.classList.add('hidden');
+            container.classList.remove('slide-up');
+        } else {
+            text.classList.remove('hidden');
+            text.classList.add('visible');
+            container.classList.add('slide-up');
+        }
+    });
+});
+
+const slider = document.getElementById('galleryList');
+const items = slider.querySelectorAll('li');
+const itemWidth = items[0].offsetWidth + 16; // item width + gap (Tailwind gap-4 = 1rem = 16px)
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+// Strzałki
+prevBtn.addEventListener('click', () => {
+    slider.scrollLeft -= itemWidth;
+});
+
+nextBtn.addEventListener('click', () => {
+    slider.scrollLeft += itemWidth;
+});
+</script>
+
 	<!---------- QUIZ ----------->
 	<section id="quiz" class="h-screen px-6 py-4">
 		<h2 class="py-6 text-4xl">Quiz</h2>
