@@ -25,18 +25,18 @@ let tabSwitchers = document.querySelectorAll('[target-wrapper]')
             }
         })
     })
-    function toggleFlagVisibility() {
-    const flags = document.querySelectorAll('.flag');
-    flags.forEach(flag => {
+    function toggleAgencjaVisibility() {
+    const agencje = document.querySelectorAll('.agencja-nazwa');
+    agencje.forEach(agencja => {
       if (window.innerWidth >= 768) {
-        flag.classList.remove('hidden');
+        agencja.classList.remove('hidden');
       } else {
-        flag.classList.add('hidden');
+        agencja.classList.add('hidden');
       }
     });
   }
-  toggleFlagVisibility();
-  window.addEventListener('resize', toggleFlagVisibility);
+  toggleAgencjaVisibility();
+  window.addEventListener('resize', toggleAgencjaVisibility);
 
   //Układ słoneczny
   const planetFacts = {
