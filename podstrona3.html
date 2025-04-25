@@ -222,7 +222,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center" data-aos="fade-left" data-aos-duration="500">
+                <div id="right" class="lg:w-[600px] w-full h-full flex flex-wrap items-center justify-center" data-aos="fade-left" data-aos-duration="500" >
                     <div class="w-[300px] lg:w-[600px] h-full flex flex-wrap items-center justify-center">
                         <h3 class="text-center text-xl font-semibold my-8 text-white w-full">
                             <b class="px-2">Poznaj astronautów, którzy odbyli podróż poza Ziemię</b>
@@ -596,9 +596,18 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        const mobileLinks = mobileMenu.querySelectorAll('a, button');
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
     </script>
     <!---------- HEADER ------------->
-    <section class="relative h-screen lg:h-auto overflow-hidden text-white">
+    <section class="relative h-screen lg:h-auto overflow-hidden text-white ">
     <!-- TŁO PARALLAX -->
     <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
      style="background-image: url('astronaut.jpg'); will-change: transform;"></div>
@@ -707,11 +716,11 @@ img.onload = () => {
     </section>
     <!---------- STOPKA ---------->
     <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4 overflow-hidden" style="background-image: url('moon.jpg');">
-        <h2 class="py-6 text-4xl" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">Informacje dodatkowe</h2>
-        <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">Autorki:</p>
+        <h2 class="py-6 text-4xl" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Informacje dodatkowe</h2>
+        <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Autorki:</p>
     
         <div class="flex flex-col md:flex-row px-6 w-full">
-            <ul class="py-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300">
+            <ul class="py-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">
                 <li>Aleksandra Gwóźdź</li>
                 <li>Urszula Ziarnek</li>
                 <li>Paulina Ziółkowska</li>
