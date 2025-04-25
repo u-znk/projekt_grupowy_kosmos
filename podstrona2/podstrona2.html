@@ -11,6 +11,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style type="text/tailwindcss">
+        /*tabela*/
+        .tab-item.active {
+            background: white;
+            color: black;
+            border-color: white;
+            font-weight: bold;
+            margin-bottom: -10px;
+            border-top-left-radius: calc(infinity * 1px);
+            border-top-right-radius: calc(infinity * 1px)
+        }
+
+        .tab-content {
+            width: 100%;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         @keyframes orbitWobble {
           0%   { transform: translateX(0) translateY(0); }
           25%  { transform: translateX(6px) translateY(-6px); }
@@ -66,7 +86,7 @@
             width: 150%;
             height: 150%;
             border-radius: 1000px;
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.2);
             animation: pulse-ring 1.5s infinite;
             z-index: -1;
         }
@@ -83,7 +103,7 @@
             width: 120%;
             height: 120%;
             border-radius: 1000px;
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.2);
             animation: pulse-ring 1.5s infinite;
             z-index: -1;
         }
@@ -100,7 +120,7 @@
             width: 90%;
             height: 90%;
             border-radius: 1000px;
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.2);
             animation: pulse-ring 1.5s infinite;
             z-index: -1;
         }
@@ -121,7 +141,7 @@
 
 </head>
 
-<body>
+<body class="bg-black bg-gradient-to-b from-transparent to-black" style="background-image: url('bg-tile.jpg');">
     <!---------- NAVIGATION ---------->
     <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
         <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
@@ -146,8 +166,8 @@
                 <li>
                     <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
                         <button>
-                        <a href="#ukladSloneczny">
-                            <span class="inline">Maszyny w kosmosie</span>
+                        <a href="#agencje">
+                            <span class="inline">Agencje kosmiczne</span>
                         </a>
                         </button>
                     </div>
@@ -155,9 +175,8 @@
                 <li>
                     <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg p-[2px]">
                         <button>
-                        <a href="#oldest">
-                            <span class="block lg:hidden">Najstarsze</span>
-                            <span class="hidden lg:inline">Najstarsze wydarzenia</span>
+                        <a href="#ukladSloneczny">
+                            <span class="inline">Maszyny w kosmosie</span>
                         </a>
                         </button>
                     </div>
@@ -180,14 +199,18 @@
             <li>
                 <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
                     <button>
-                    <a href="#newest">Najnowsze wydarzenia</a>
+                        <a href="#agencje">
+                            <span class="inline">Agencje kosmiczne</span>
+                        </a>
                     </button>
                 </div>
             </li>
             <li>
                 <div class="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg lg:p-[2px] p-[1px] justify-center items-center">
                     <button>
-                    <a href="#oldest">Najstarsze wydarzenia</a>
+                        <a href="#ukladSloneczny">
+                            <span class="inline">Maszyny w kosmosie</span>
+                        </a>
                     </button>
                 </div>
             </li>
@@ -208,81 +231,526 @@
     </script>
 
     <!---------- HEADER ------------->
-    <section class="relative bg-black bg-cover bg-top bg-no-repeat bg-scroll text-white flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('header_os-tech_2.jpg');">
+    <section class="relative  bg-cover bg-top bg-no-repeat bg-scroll text-white flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('header_os-tech_2.jpg');">
         <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6">
-            <h1 id="nazwa" class="text-5xl md:text-8xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Osiągnięcia <br>technologiczne</h1>
+            <h1 id="nazwa" class="text-4xl md:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Osiągnięcia <br>technologiczne</h1>
         </div>
         <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
     </section>
+    <div class="h-[100px] bg-gradient-to-t from-transparent to-black"></div>
 
     <!--------------TREŚĆ------------>
-    <section id="firmy" class="bg-black">
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-2">
-            <div class="w-auto">
-              <button class="img-tile bg-gray-200 p-8 w-[200px] aspect-video flex items-center justify-center transition hover:bg-white">
-                NASA
-              </button>
-            </div>
-            <div class="">
-              <div class="text-box bg-gray-200 p-6 font-semibold text-center hidden">
-                Rakieta Falcon Heavy wystartowała z misją na Marsa.
-              </div>
-            </div>
-          </div>
-        
-          <!-- Kafelek 2 -->
-          <div class="flex flex-col md:flex-row-reverse items-center gap-6">
-            <div class="w-full md:w-1/2">
-              <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
-                ESA
-              </button>
-            </div>
-            <div class="w-full md:w-1/2">
-              <div class="text-box bg-gray-900 rounded-xl p-6 text-xl font-semibold text-center hidden">
-                Nowa kometa odkryta w Układzie Słonecznym.
-              </div>
-            </div>
-          </div>
-        
-          <!-- Kafelek 3 -->
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <div class="w-full md:w-1/2">
-              <button class="img-tile bg-gray-800 rounded-xl p-8 w-full aspect-video flex items-center justify-center transition hover:bg-gray-700">
-                itd
-              </button>
-            </div>
-            <div class="w-full md:w-1/2">
-              <div class="text-box bg-gray-900 rounded-xl p-6 text-xl font-semibold text-center hidden">
-                Łazik Perseverance zebrał próbki z marsjańskiej gleby.
-              </div>
-            </div>
-          </div>
 
-        <script>
-        const imageTiles = document.querySelectorAll(".img-tile");
-        const textBoxes = document.querySelectorAll(".text-box");
-        imageTiles.forEach(tile => {
-            tile.addEventListener("click", () => {
-                const relatedTextBox =
-                    tile.parentElement.nextElementSibling?.querySelector(".text-box") ||
-                    tile.parentElement.previousElementSibling?.querySelector(".text-box");
-                const isHidden = relatedTextBox.classList.contains("hidden");
-                textBoxes.forEach(box => box.classList.add("hidden"));
-                if (isHidden) {
-                    relatedTextBox.classList.remove("hidden");
+<section id="agencje" class="md:px-6 pt-4 pb-14">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-7">
+        <h2 class="py-6 text-4xl text-white">Agencje kosmiczne</h2>
+        <div data-aos="fade-down" data-aos-delay="100" data-aos-duration="500">
+            <ul class="w-full flex items-center justify-between pt-6 pb-1">
+                <li class="tab-item active p-[10px] md:mr-2 bg-black text-white w-full flex items-center justify-center list-none cursor-pointer rounded-lg md:rounded-full transition-all duration-300 ease-in-out hover:border-white  border-2 border-gray-800" target-wrapper="first-dynamic-table" target-tab="nasa">
+                    <img src="american-flag.jpg" alt="USA" class="flag w-14 h-auto pr-1 hidden">
+                    NASA
+                </li>
+                <li class="tab-item p-[10px] md:mr-2 bg-black text-white w-full flex items-center justify-center list-none cursor-pointer rounded-lg md:rounded-full transition-all duration-300 ease-in-out hover:border-white  border-2 border-gray-800" target-wrapper="first-dynamic-table" target-tab="esa">
+                    <img src="eu-flag.jpg" alt="UE" class="flag w-14 h-auto pr-1 hidden">
+                    ESA
+                </li>
+                <li class="tab-item p-[10px] md:mr-2 bg-black text-white w-full flex items-center justify-center list-none cursor-pointer rounded-lg md:rounded-full transition-all duration-300 ease-in-out hover:border-white  border-2 border-gray-800" target-wrapper="first-dynamic-table" target-tab="jaxa">
+                    <img src="japanese-flag.jpg" alt="Japonia" class="flag w-14 h-auto pr-1 hidden">
+                    JAXA
+                </li>
+                <li class="tab-item p-[10px] md:mr-2 bg-black text-white w-full flex items-center justify-center list-none cursor-pointer rounded-lg md:rounded-full transition-all duration-300 ease-in-out hover:border-white  border-2 border-gray-800" target-wrapper="first-dynamic-table" target-tab="rocosmos">
+                    <img src="russian-flag.jpg" alt="Rosja" class="flag w-8 lg:w-14 h-auto pr-1 hidden">
+                    Roskosmos
+                </li>
+                <li class="tab-item p-[10px] bg-black text-white w-full flex items-center justify-center list-none cursor-pointer rounded-lg md:rounded-full transition-all duration-300 ease-in-out hover:border-white  border-2 border-gray-800" target-wrapper="first-dynamic-table" target-tab="cnsa">
+                    <img src="chinese-flag.jpg" alt="Chiny" class="flag w-14 h-auto pr-1 hidden">
+                    CNSA
+                </li>
+            </ul>
+            <div id="first-dynamic-table" class="w-full bg-white p-[35px_15px] text-black rounded-sm">
+                <div class="tab-content active" id="nasa">
+                    <div class="text-black p-6 animate-fade-in space-y-6">
+                        <div class="flex flex-col md:flex-row items-center md:items-start md:h-[250px] gap-6 p-6">
+                        <!-- Logo -->
+                        <div class="w-32 md:w-40 shrink-0 hover:scale-105 transition">
+                            <img src="tabela_nasa/nasa-logo.png" alt="NASA logo" class="w-full h-auto object-contain">
+                        </div>
+                        <!-- Opis -->
+                        <div class="flex-1">
+                            <h2 id="nazwa" class="text-3xl font-extrabold tracking-wide text-center md:text-left">NASA</h2>
+                            <p class="text-black max-w-2xl">
+                            ... czyli National Aeronautics and Space Administration, to agencja kosmiczna Stanów Zjednoczonych, założona w 1958 roku.
+                            Odpowiada za program kosmiczny USA i badania przestrzeni kosmicznej. Jej misje zmieniły sposób, w jaki patrzymy na wszechświat. <br class="mb-4">Odwiedź <a href="https://www.nasa.gov/" target="_blank" class="hover:text-blue-400 hover:underline text-blue-800">oficjalną stronę NASA!</a>
+                            </p>
+                        </div>
+                        </div>
+                        
+                        <!-- Najważniejsze -->
+                        <div>
+                          <h3 class="text-lg font-semibold mb-2">Najważniejsze misje i osiągnięcia:</h3>
+                          <ul class="grid md:grid-cols-2 gap-4 text-white">
+                            <!--Apollo11-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-blue-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_nasa/apollo11.jpg" alt="Apollo 11" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/moon.png" alt="🌑" class="pr-2 h-[24px] w-auto"> Misja Apollo 11</h3>
+                                      <p class="text-sm">Pierwsze lądowanie człowieka na Księżycu.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--Hubble-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-blue-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_nasa/hubble.jpeg" alt="Hubble" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/telescope.png" alt="🔭" class="pr-2 h-[24px] w-auto"> Teleskop Hubble</h3>
+                                      <p class="text-sm">Obserwacja wszechświata od 1990 r.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--Perseverance-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-blue-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_nasa/perseverance.jpg" alt="Perseverance" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/mars-rover.png" alt="🔴" class="pr-2 h-[24px] w-auto">Perseverance</h3>
+                                      <p class="text-sm">Odkrywanie tajemnic Marsa.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--Parker-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-blue-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_nasa/parker.jpg" alt="Sonda Parker" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/space-probe.png" alt="🌞" class="pr-2 h-[24px] w-auto">Sonda Parker</h3>
+                                      <p class="text-sm">Najbliżej Słońca w historii ludzkości.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                          </ul>
+                        </div>
+                      
+                        <!-- Ciekawostka -->
+                        <div class="bg-blue-800/50 rounded-xl p-4 text-sm mt-4 border border-blue-800 shadow-inner">
+                          🧠 <strong>Ciekawostka:</strong> NASA pierwotnie używała gołębi do testowania technologii nawigacyjnych w latach 60.
+                        </div>
+                      </div>
+                </div>
+                <div class="tab-content" id="esa">
+                    <div class="text-black p-6 animate-fade-in space-y-6">
+                        <div class="flex flex-col md:flex-row items-center md:items-start md:h-[250px] gap-6 p-6">
+                        <!-- Logo -->
+                        <div class="w-32 md:w-40 shrink-0 hover:scale-105 transition">
+                            <img src="tabela_esa/esa-logo.png" alt="ESA logo" class="w-full h-auto object-contain">
+                        </div>
+                        <!-- Opis -->
+                        <div class="flex-1">
+                            <h2 id="nazwa" class="text-3xl font-extrabold tracking-wide text-center md:text-left">ESA</h2>
+                            <p class="text-black max-w-2xl">
+                                European Space Agency to międzynarodowa organizacja zajmująca się badaniami przestrzeni kosmicznej, zrzeszająca 22 państwa członkowskie Europy. Została założona w 1975 roku i od tego czasu prowadzi różnorodne misje kosmiczne. ESA często współpracuje z NASA, JAXA czy CNSA, tworząc wspólne projekty naukowe i technologiczne.
+                                <br class="mb-4">Odwiedź <a href="https://www.esa.int/" target="_blank" class="hover:text-teal-500 hover:underline text-teal-800">oficjalną stronę ESA!</a>
+                            </p>
+                        </div>
+                        </div>
+                        
+                        <!-- Najważniejsze -->
+                        <div>
+                          <h3 class="text-lg font-semibold mb-2">Najważniejsze misje i osiągnięcia:</h3>
+                          <ul class="grid md:grid-cols-2 gap-4 text-white">
+                            <!--Rosetta-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-teal-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_esa/rosetta.png" alt="Rosetta" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/space-probe.png" alt="🌌" class="pr-2 h-[24px] w-auto">Rosetta</h3>
+                                      <p class="text-sm">Misja, która jako pierwsza w historii dotarła do komety.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--Copernicus-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-teal-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_esa/copernicus.jpg" alt="Copernicus mapa" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/satellite.png" alt="🛰️" class="pr-2 h-[24px] w-auto"> Copernicus</h3>
+                                      <p class="text-sm">Program monitorujący Ziemię przy pomocy satelitów Sentinel.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--Ariane5-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-teal-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_esa/ariane5.jpg" alt="Ariane 5" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/rocket.png" alt="🚀" class="pr-2 h-[24px] w-auto">Ariane 5</h3>
+                                      <p class="text-sm">Rakieta nośna, która przez dekady wynosiła na orbitę satelity.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!--BepiColombo-->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-teal-800 text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_esa/bepicolombo.jpg" alt="BepiColombo" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/space-probe.png" alt="🪐" class="pr-2 h-[24px] w-auto">BepiColombo</h3>
+                                      <p class="text-sm">Najbardziej zaawansowane badania Merkurego w historii.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                      
+                        <!-- Ciekawostka -->
+                        <div class="bg-teal-800/50 rounded-xl p-4 text-sm mt-4 border border-teal-800 shadow-inner">
+                          🧠 <strong>Ciekawostka:</strong> ESA stworzyła eksperymentalnego robota Justin, który może być zdalnie sterowany z Ziemi w czasie rzeczywistym.
+                        </div>
+                      </div>
+                </div>
+                <div class="tab-content" id="jaxa">
+                    <div class="text-black p-6 animate-fade-in space-y-6">
+                        <div class="flex flex-col md:flex-row items-center md:items-start md:h-[250px] gap-6 p-6">
+                        <!-- Logo -->
+                        <div class="w-32 md:w-40 shrink-0 hover:scale-105 transition">
+                            <img src="tabela_jaxa/jaxa-logo.png" alt="JAXA logo" class="w-full h-auto object-contain">
+                        </div>
+                        <!-- Opis -->
+                        <div class="flex-1">
+                            <h2 id="nazwa" class="text-3xl font-extrabold tracking-wide text-center md:text-left">JAXA</h2>
+                            <p class="text-black max-w-2xl">
+                                Japan Aerospace Exploration Agency to narodowa agencja kosmiczna Japonii, założona w 2003 roku z połączenia trzech wcześniej istniejących organizacji.
+                                JAXA słynie z precyzyjnej inżynierii i innowacyjnych misji, często współpracując z NASA, ESA i innymi partnerami.<br class="mb-4">Odwiedź <a href="https://global.jaxa.jp/" target="_blank" class="hover:text-blue-300 hover:underline text-[#366de4]">oficjalną stronę JAXA!</a>
+                            </p>
+                        </div>
+                        </div>
+                        
+                        <!-- Najważniejsze -->
+                        <div>
+                          <h3 class="text-lg font-semibold mb-2">Najważniejsze misje i osiągnięcia:</h3>
+                          <ul class="grid md:grid-cols-2 gap-4 text-white">
+                            <!------------Hayabusa------------>
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#366de4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_jaxa/hayabusa.jpg" alt="Hayabusa" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/space-probe.png" alt="🌌" class="pr-2 h-[24px] w-auto">Hayabusa</h3>
+                                      <p class="text-sm">Pobranie próbek z asteroid i dostarczenie ich na Ziemię.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------SLIM----------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#366de4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_jaxa/slim.jpg" alt="SLIM" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/moon.png" alt="🌑" class="pr-2 h-[24px] w-auto">SLIM</h3>
+                                      <p class="text-sm">Precyzyjne lądowanie na Księżycu w 2024 roku.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------Kibo------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#366de4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_jaxa/kibo.jpg" alt="Moduł Kibo" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_jaxa/space-station.png" alt="🛰️" class="pr-2 h-[24px] w-auto">Kibo</h3>
+                                      <p class="text-sm">Największy moduł do badań na MSK.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!----------------H3-------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#366de4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_jaxa/h3.jpg" alt="Rakieta H3" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/rocket.png" alt="🚀" class="pr-2 h-[24px] w-auto">H-IIA / H3</h3>
+                                      <p class="text-sm">Rodzina japońskich rakiet nośnych.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                          </ul>
+                        </div>
+                      
+                        <!-- Ciekawostka -->
+                        <div class="bg-[#366de4]/50 rounded-xl p-4 text-sm mt-4 border border-[#366de4] shadow-inner">
+                          🧠 <strong>Ciekawostka:</strong> JAXA jako pierwsza agencja wysłała robota-pomocnika (Int-Ball) na Międzynarodową Stację Kosmiczną.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="rocosmos">
+                    <div class="text-black p-6 animate-fade-in space-y-6">
+                        <div class="flex flex-col md:flex-row items-center md:items-start md:h-[250px] gap-6 p-6">
+                        <!-- Logo -->
+                        <div class="w-32 md:w-40 shrink-0 hover:scale-105 transition">
+                            <img src="tabela_rocosmos/rocosmos-logo.png" alt="Roskosmos logo" class="w-full h-auto object-contain">
+                        </div>
+                        <!-- Opis -->
+                        <div class="flex-1">
+                            <h2 id="nazwa" class="text-3xl font-extrabold tracking-wide text-center md:text-left">Roskosmos</h2>
+                            <p class="text-black max-w-2xl">
+                                To narodowa agencja kosmiczna Rosji, powstała w 1992 roku po rozpadzie ZSRR, bazując na dorobku radzieckiego programu kosmicznego. Agencja odpowiada za eksplorację kosmosu, rozwój rakiet i statków kosmicznych, a także za obecność Rosji na Międzynarodowej Stacji Kosmicznej.<br class="mb-4">Odwiedź <a href="https://www.roscosmos.ru/" target="_blank" class="hover:text-red-400 hover:underline text-[#e4365c]">oficjalną stronę Roskosmos!</a>
+                            </p>
+                        </div>
+                        </div>
+                        
+                        <!-- Najważniejsze -->
+                        <div>
+                          <h3 class="text-lg font-semibold mb-2">Najważniejsze misje i osiągnięcia:</h3>
+                          <ul class="grid md:grid-cols-2 gap-4 text-white">
+                            <!------------Człowiek w kosmosie------------>
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#e4365c] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_rocosmos/gagarin.jpg" alt="Gagarin" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/rocket.png" alt="🌌" class="pr-2 h-[24px] w-auto">Pierwszy człowiek w kosmosie</h3>
+                                      <p class="text-sm">W 1961 roku Jurij Gagarin okrążył Ziemię.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------Sputnik----------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#e4365c] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_rocosmos/sputnik.jpg" alt="Sputnik" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/satellite.png" alt="🛰️" class="pr-2 h-[24px] w-auto">Sputnik 1</h3>
+                                      <p class="text-sm">Pierwszy sztuczny satelita na orbicie.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------Sojuz------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#e4365c] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_rocosmos/sojuz.jpg" alt="Rakieta nośna Sojuz" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/rocket.png" alt="🚀" class="pr-2 h-[24px] w-auto">Program Sojuz</h3>
+                                      <p class="text-sm">Statki transportujące załogi z różnych krajów na MSK.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!----------------H3-------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#e4365c] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_rocosmos/luna25.jpg" alt="Sonda Łuna 25" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/moon.png" alt="🌖" class="pr-2 h-[24px] w-auto">Misje Łuna</h3>
+                                      <p class="text-sm">Powrót Rosji do eksploracji Księżyca.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                          </ul>
+                        </div>
+                      
+                        <!-- Ciekawostka -->
+                        <div class="bg-[#e4365c]/50 rounded-xl p-4 text-sm mt-4 border border-[#e4365c] shadow-inner">
+                          🧠 <strong>Ciekawostka:</strong> W 1971 roku stacja Salut 1 wyniesiona przez ZSRR stała się pierwszą stacją kosmiczną w historii.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="cnsa">
+                    <div class="text-black p-6 animate-fade-in space-y-6">
+                        <div class="flex flex-col md:flex-row items-center md:items-start md:h-[250px] gap-6 p-6">
+                        <!-- Logo -->
+                        <div class="w-32 md:w-40 shrink-0 hover:scale-105 transition">
+                            <img src="tabela_cnsa/cnsa-logo.png" alt="CNSA logo" class="w-full h-auto object-contain">
+                        </div>
+                        <!-- Opis -->
+                        <div class="flex-1">
+                            <h2 id="nazwa" class="text-3xl font-extrabold tracking-wide text-center md:text-left">CNSA</h2>
+                            <p class="text-black max-w-2xl">
+                                ...czyli China National Space Administration, to agencja kosmiczna Chińskiej Republiki Ludowej, powstała w 1993 roku. W ciągu trzech dekad CNSA zbudowała jeden z najbardziej ambitnych i dynamicznych programów kosmicznych na świecie, obejmujący eksplorację Księżyca, Marsa i budowę własnej stacji kosmicznej.<br class="mb-4">Odwiedź <a href="https://www.cnsa.gov.cn/english/index.html" target="_blank" class="hover:text-blue-300 hover:underline text-[#2f92e4]">oficjalną stronę CNSA!</a>
+                            </p>
+                        </div>
+                        </div>
+                        
+                        <!-- Najważniejsze -->
+                        <div>
+                          <h3 class="text-lg font-semibold mb-2">Najważniejsze misje i osiągnięcia:</h3>
+                          <ul class="grid md:grid-cols-2 gap-4 text-white">
+                            <!------------Program Chang'e------------>
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#2f92e4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_cnsa/chang-e.jpg" alt="Sonda Chang'e-4" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/space-probe.png" alt="🌕" class="pr-2 h-[24px] w-auto">Program Chang'e</h3>
+                                      <p class="text-sm">20-letni program bezzałogowych i załogowych badań Księżyca.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------Tiangong----------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#2f92e4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_cnsa/tiangong.jpg" alt="Stacja kosmiczna Tiangong" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_jaxa/space-station.png" alt="🛰️" class="pr-2 h-[24px] w-auto">Stacja Kosmiczna Tiangong</h3>
+                                      <p class="text-sm">Długoterminowe misje załogowe i eksperymenty naukowe.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!------------Tianwen-1------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#2f92e4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_cnsa/tianwen1.jpg" alt="Łazik Zhurong misji Tianwen-1" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_nasa/mars-rover.png" alt="🔴" class="pr-2 h-[24px] w-auto">Tianwen-1</h3>
+                                      <p class="text-sm">Misja na Marsa z orbiterem, lądownikiem i łazikiem.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <!----------------Beidou-------------->
+                            <li>
+                                <div class="flex overflow-hidden rounded-sm bg-[#2f92e4] text-white hover:scale-105 transition">
+                                    <!--Obraz-->
+                                    <div class="w-1/3 relative">
+                                      <img src="tabela_cnsa/beidou.jpg" alt="Model sieci satelitów Beidou" class="object-cover h-full w-full">
+                                    </div>
+                                    <!--Treść-->
+                                    <div class="flex flex-col justify-center px-4 py-2 w-2/3">
+                                      <h3 class="font-semibold text-lg mb-1 flex"><img src="tabela_esa/satellite.png" alt="🛰️" class="pr-2 h-[24px] w-auto">Beidou</h3>
+                                      <p class="text-sm">Niezależny chiński system nawigacji satelitarnej.</p>
+                                    </div>
+                                  </div>
+                            </li>
+                          </ul>
+                        </div>
+                      
+                        <!-- Ciekawostka -->
+                        <div class="bg-[#2f92e4]/50 rounded-xl p-4 text-sm mt-4 border border-[#2f92e4] shadow-inner">
+                          🧠 <strong>Ciekawostka:</strong> CNSA jako pierwsza agencja kosmiczna w historii wylądowała na niewidocznej stronie Księżyca.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    <script>
+    let tabSwitchers = document.querySelectorAll('[target-wrapper]')
+    tabSwitchers.forEach(item => {
+        item.addEventListener('click', (e)=> {
+            let currentWrapperId = item.getAttribute('target-wrapper')
+            let currentWrapperTargetId = item.getAttribute('target-tab')
+            
+            let currentWrapper =  document.querySelector(`#${currentWrapperId}`)
+            let currentWrappersTarget = document.querySelector(`#${currentWrapperTargetId}`)
+
+            let allCurrentTabItem = document.querySelectorAll(`[target-wrapper='${currentWrapperId}']`)
+            let allCurrentWrappersTarget = document.querySelectorAll(`#${currentWrapperId} .tab-content`)
+              
+            if(currentWrappersTarget) {
+                if(!currentWrappersTarget.classList.contains('active')) {
+                    allCurrentWrappersTarget.forEach(tabItem => {
+                        tabItem.classList.remove('active')
+                    })
+                    allCurrentTabItem.forEach(item => {
+                        item.classList.remove('active')
+                    })
+                    item.classList.add('active')
+                    currentWrappersTarget.classList.add('active')
                 }
-            });
-        });
-        </script>
-    
+            }
+        })
+    })
+    function toggleFlagVisibility() {
+    const flags = document.querySelectorAll('.flag');
+    flags.forEach(flag => {
+      if (window.innerWidth >= 768) {
+        flag.classList.remove('hidden');
+      } else {
+        flag.classList.add('hidden');
+      }
+    });
+  }
+  toggleFlagVisibility();
+  window.addEventListener('resize', toggleFlagVisibility);
+    </script>
+
 </section>
-<section id="ukladSloneczny" class="bg-black h-full px-6 pt-4 pb-14">
+
+<section id="ukladSloneczny" class="h-full lg:min-h-[1000px] md:px-6 pt-4 pb-14">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-7 text-white">
         <h2 class="py-6 text-4xl">Maszyny w kosmosie</h2>
         <p class="lg:collapse text-lg">Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</p>
     </div>
-    <div class="bg-black text-white flex flex-col items-center justify-center space-y-8 p-6">
-        <div class="flex flex-col items-center justify-evenly gap-10 lg:flex-row lg:items-center lg:flex-wrap">
+    <div class="text-white flex flex-col items-center justify-center sm:space-y-10 md:space-y-8 p-6 overflow-hidden md:overflow-visible">
+        <div class="flex flex-col items-center justify-evenly gap-10 lg:flex-row lg:items-center lg:flex-wrap ">
           <div data-planet="Słońce" class="planet sun-pulse w-[500px] h-[500px] bg-orange-500 rounded-full cursor-pointer"></div>
           <div data-planet="Merkury" class="planet planet-orbit animate-[orbitWobble_6s_infinite] w-[50px] h-[50px] bg-[#929785] rounded-full cursor-pointer"></div>
           <div data-planet="Wenus" class="planet planet-orbit animate-[orbitWobble_7s_infinite] w-[90px] h-[90px] bg-[#ff8818] rounded-full cursor-pointer"></div>
@@ -295,10 +763,10 @@
         </div>
       
         <!--Info Textbox -->
-        <div id="planet-info" class="text-left text-lg font-semibold p-5 lg:mx-36 border-[1px] invisible lg:visible">Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</div>
+        <div id="planet-info" class="text-left text-lg p-5 lg:mx-36 rounded-sm border-[1px] invisible lg:visible">Kliknij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</div>
         </div>
       
-    <script>
+    <script> //do zrobienia jeszcze - chowanie textboxa na małych ekranach po ponownym naciśnięciu na planetę
     const planetFacts = {
           'Słońce': '<p class="text-center text-yellow-300 pb-2 font-bold text-xl">Słońce</p><p>⦿ <u>Parker Solar Probe</u> (NASA) – sonda najbliżej Słońca, od 2018 bada wiatr słoneczny i koronalne wyrzuty masy;<br>⦿ <u>Solar Orbiter</u> (ESA/NASA) - sonda od 2020 mierząca wiatr słoneczny, badająca magnetosfery i bieguny Słońca.<p>',
           'Merkury': '<p class="text-center text-[#929785] pb-2 font-bold text-xl">Merkury</p><p>⦿ <u>BepiColombo</u> (ESA/JAXA) - orbiter do badań pola magnetycznego, geologii i atmosfery. Jeszcze nie dotarł na orbitę planety, jego przylot jest prognzowany na 2025 lub 2026;<br>⦿ W przeszłości Merkurego odwiedziły sondy <u>MESSENGER i Mariner 10</u> - obie należące do amerykańskiej NASA.<p>',
@@ -310,7 +778,7 @@
           'Uran': '<p class="text-center text-[#80d5fd] pb-2 font-bold text-xl">Uran</p><p>⦿ <u>Voyager-2</u> (NASA) to jedyna sonda, która minęła Urana (przelot w 1986) i Neptuna (w 1989). Nadal jest aktywna w przestrzeni międzygwiezdnej.<p>',
           'Neptun': '<p class="text-center text-[#7b8fff] pb-2 font-bold text-xl">Neptun</p><p>⦿ <u>Voyager-2</u> (NASA) to jedyna sonda, która minęła Urana (przelot w 1986) i Neptuna (w 1989). Nadal jest aktywna w przestrzeni międzygwiezdnej.<p>'
         };
-      
+
     document.querySelectorAll('.planet').forEach(planet => {
         planet.addEventListener('click', () => {
             const name = planet.dataset.planet;
@@ -336,7 +804,7 @@
     const isDesktop = window.innerWidth >= 1024; //animacje fade-in textboxa
     if (!isDesktop) {
         const infoBox = document.createElement('div');
-        infoBox.className = "dynamic-info text-left text-lg font-semibold p-5 border-[1px] max-w-xs";
+        infoBox.className = "dynamic-info text-left text-lg p-5 rounded-sm border-[1px] max-w-xs";
         infoBox.innerHTML = planetFacts[name];
         void infoBox.offsetWidth;
         infoBox.classList.add('animate-fadeInScale');
@@ -352,7 +820,7 @@
     window.addEventListener('resize', () => { //reset do default (usuwanie animacji i tekstu) po zmianie rozmiaru ekranu
         document.querySelectorAll('.dynamic-info').forEach(box => box.remove());
     if (window.innerWidth >= 1024) {
-        document.getElementById('planet-info').innerHTML = 'Naciśnij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.';
+        document.getElementById('planet-info').innerHTML = 'Kliknij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.';
         document.querySelectorAll('.planet').forEach(p => {
             p.classList.remove('activePlanet', 'activeBigPlanet', 'activeHugePlanet');
         });
@@ -370,6 +838,7 @@
       
 </section>
 
+<div class="h-[50px] md:h-[100px] bg-gradient-to-b from-transparent to-black to-70%"></div>
     <!---------- STOPKA ---------->
     <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('../moon.jpg');">
         <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
@@ -391,7 +860,7 @@
     <script>
         AOS.init({
             duration: 800,  // czas animacji
-            once: false,    // animacja przy każdej zmianie widoku
+            once: true,    // animacja NIE przy każdej zmianie widoku
             mirror: true    // animacja w obie strony (wejście i wyjście)
         });
     </script>
