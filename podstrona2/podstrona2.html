@@ -763,7 +763,7 @@
         </div>
       
         <!--Info Textbox -->
-        <div id="planet-info" class="text-left text-lg p-5 lg:mx-36 rounded-sm border-[1px] invisible lg:visible">Kliknij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</div>
+        <div id="planet-info" class="text-left text-lg p-5 lg:mx-36 rounded-sm bg-black/70 border-[1px] invisible lg:visible">Kliknij na planetę/gwiazdę, by dowiedzieć się o satelitach, łazikach, sondach i innych maszynach, których zadaniem jest (lub było) badanie jej.</div>
         </div>
       
     <script> //do zrobienia jeszcze - chowanie textboxa na małych ekranach po ponownym naciśnięciu na planetę
@@ -804,7 +804,7 @@
     const isDesktop = window.innerWidth >= 1024; //animacje fade-in textboxa
     if (!isDesktop) {
         const infoBox = document.createElement('div');
-        infoBox.className = "dynamic-info text-left text-lg p-5 rounded-sm border-[1px] max-w-xs";
+        infoBox.className = "dynamic-info text-left text-lg p-5 rounded-sm border-[1px] bg-black/70 max-w-xs";
         infoBox.innerHTML = planetFacts[name];
         void infoBox.offsetWidth;
         infoBox.classList.add('animate-fadeInScale');
