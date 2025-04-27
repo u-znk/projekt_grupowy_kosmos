@@ -228,6 +228,15 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        const mobileLinks = mobileMenu.querySelectorAll('a, button');
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
     </script>
 
     <!---------- HEADER ------------->
@@ -728,20 +737,22 @@
 
 <div class="h-[50px] md:h-[100px] bg-gradient-to-b from-transparent to-black to-70%"></div>
     <!---------- STOPKA ---------->
-    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4" style="background-image: url('../moon.jpg');">
-        <h2 class="py-6 text-4xl">Informacje dodatkowe</h2>
-        <p>Autorki:</p>
-        <div class="flex items-center justify-between px-6 w-full">
-            <ul class="py-4">
-                <li>Aleksandra Gwóźdź</li>
-                <li>Urszula Ziarnek</li>
-                <li>Paulina Ziółkowska</li>
-                <li>Sasha Yablonska</li>
-            </ul>
-        </div>
-  
-        <!-- Link do źródeł w prawym dolnym rogu -->
-        <a target="_blank" href="../zrodla.html" class="text-sm absolute bottom-4 right-6 underline">Zobacz źródła</a>
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4 overflow-hidden" style="background-image: url('../moon.jpg');">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14">
+          <h2 class="py-6 text-4xl" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Informacje dodatkowe</h2>
+          <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Autorki:</p>
+      
+          <div class="flex flex-col md:flex-row px-6 w-full">
+              <ul class="py-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">
+                  <li>Aleksandra Gwóźdź</li>
+                  <li>Urszula Ziarnek</li>
+                  <li>Paulina Ziółkowska</li>
+                  <li>Sasha Yablonska</li>
+              </ul>
+          </div>
+      </div>
+          <!-- Link do źródeł absolutnie w prawym dolnym rogu -->
+          <a href="../zrodla.html" target="_blank" class="text-sm underline absolute bottom-4 right-6">Zobacz źródła</a>
     </footer>
     <script src="script-podstrona2.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
