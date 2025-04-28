@@ -68,11 +68,20 @@ h2, .teko-headings {
     width: 80vw;
 }
 
+ #galleryList li div {
+     max-width: 90%;
+     margin: 0 auto;
+     left: 0;
+     float: none;
+      transform: translateY(-50%);
+     top: 50%;
+ }
+
 @media (max-width: 768px) {
     #galleryList li {
         width: 100vw;
         background-size:cover;
-        background-position: top;
+        background-position: center top;
     }
 }
 
