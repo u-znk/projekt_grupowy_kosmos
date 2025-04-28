@@ -62,6 +62,9 @@ h2, .teko-headings {
     flex-wrap: nowrap;
     overflow-x: auto;
 }
+.right-object {
+  background-position: right center;
+}
 
 #galleryList li {
     flex: 0 0 auto;
@@ -73,14 +76,14 @@ h2, .teko-headings {
      margin: 0 auto;
      left: 0;
      float: none;
-      transform: translateY(-50%);
+     transform: translateY(-50%);
      top: 50%;
  }
 
 @media (max-width: 768px) {
     #galleryList li {
         width: 100vw;
-        background-size:cover;
+        background-size: cover;
         background-position: center top;
     }
 }
