@@ -121,8 +121,8 @@ h2, .teko-headings {
     cursor: no-drop;
 }
 .correct{
-    background: oklch(72.3% 0.219 149.579);
+    background: oklch(96.2% 0.044 156.743);
 }
 .incorrect{
-    background: oklch(63.7% 0.237 25.331);
+    background: oklch(89.2% 0.058 10.001);
 }
