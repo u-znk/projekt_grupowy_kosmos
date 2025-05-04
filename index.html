@@ -341,10 +341,10 @@ img.onload = () => {
 
 	<!----- QUIZ ------>
 	<section id="quiz" class="h-full px-6 pt-4 pb-14 overflow-hidden bg-white">
-		<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
-			<h2 class="py-6 text-4xl">Quiz</h2>
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-0" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
+			<h2 class="py-2 text-4xl">Quiz</h2>
 		</div>
-		<div class="w-9/10 max-w-xl mt-4 mx-auto mb-0 rounded-xl p-7 border-2 border-sky-800">
+		<div class="w-9/10 max-w-xl mt-2 mx-auto mb-14 rounded-xl p-7 border-2 border-sky-800" data-aos="fade-left" data-aos-delay="0" data-aos-duration="300">
 			<h3 id="question" class="border-b-2 border-b-sky-800 font-semibold text-xl pb-4 mb-1">tu pytanie</h3>
 			<div id="answer-buttons">
 				<button class="btn bg-white hover:bg-gray-600 hover:text-white transition-all duration-300 font-medium w-full border border-solid border-gray-600 p-2 my-2 mx-0 text-left text-gray-600 rounded-sm cursor-pointer">odp 1</button>
@@ -354,6 +354,7 @@ img.onload = () => {
 			</div>
 			<button id="next-btn" class="bg-sky-800 hover:bg-sky-900 text-white hidden font-semibold w-40 border-0 p-2 mt-5 mx-auto mb-0 rounded cursor-pointer">Dalej</button>
 		</div>
+		
 		<script>
 			const questions = [
 				{
