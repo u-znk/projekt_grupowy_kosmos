@@ -343,33 +343,149 @@ img.onload = () => {
 		<div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300">
 			<h2 class="py-6 text-4xl">Quiz</h2>
 		</div>
-		
+		<div class="w-9/10 max-w-xl mt-14 mx-auto mb-0 rounded-xl p-7 border-2 border-sky-800">
+			<h3 id="question" class="border-b-2 border-b-sky-600 font-semibold text-xl pb-4 mb-1">tu pytanie</h3>
+			<div id="answer-buttons">
+				<button class="btn bg-white hover:bg-gray-600 hover:text-white transition-all duration-300 font-medium w-full border border-solid border-gray-600 p-2 my-2 mx-0 text-left text-gray-600 rounded-sm cursor-pointer">odp 1</button>
+				<button class="btn bg-white hover:bg-gray-600 hover:text-white transition-all duration-300 font-medium w-full border border-solid border-gray-600 p-2 my-2 mx-0 text-left text-gray-600 rounded-sm cursor-pointer">odp 2</button>
+				<button class="btn bg-white hover:bg-gray-600 hover:text-white transition-all duration-300 font-medium w-full border border-solid border-gray-600 p-2 my-2 mx-0 text-left text-gray-600 rounded-sm cursor-pointer">odp 3</button>
+				<button class="btn bg-white hover:bg-gray-600 hover:text-white transition-all duration-300 font-medium w-full border border-solid border-gray-600 p-2 my-2 mx-0 text-left text-gray-600 rounded-sm cursor-pointer">odp 4</button>
+			</div>
+			<button id="next-btn" class="bg-sky-600 text-white hidden font-semibold w-40 border-0 p-2 mt-5 mx-auto mb-0 rounded cursor-pointer">Dalej</button>
+		</div>
+		<script>
+			const questions = [
+				{
+					question: "pytanie1",
+					answers: [
+						{ text: "a", correct: false},
+						{ text: "b", correct: false},
+						{ text: "c", correct: false},
+						{ text: "d", correct: true},
+					]
+				},
+				{
+					question: "pytanie2",
+					answers: [
+						{ text: "a", correct: true},
+						{ text: "b", correct: false},
+						{ text: "c", correct: false},
+						{ text: "d", correct: false},
+					]
+				},
+				{
+					question: "pytanie3",
+					answers: [
+						{ text: "a", correct: false},
+						{ text: "b", correct: false},
+						{ text: "c", correct: true},
+						{ text: "d", correct: false},
+					]
+				},
+				{
+					question: "pytanie4",
+					answers: [
+						{ text: "a", correct: true},
+						{ text: "b", correct: false},
+						{ text: "c", correct: false},
+						{ text: "d", correct: false},
+					]
+				},
+				{
+					question: "pytanie5",
+					answers: [
+						{ text: "a", correct: false},
+						{ text: "b", correct: true},
+						{ text: "c", correct: false},
+						{ text: "d", correct: false},
+					]
+				}
+			];
+
+			const questionElement = document.getElementById("question");
+			const answerButtons = document.getElementById("answer-buttons");
+			const nextButton = document.getElementById("next-btn");
+
+			let currentQuestionIndex = 0;
+			let score = 0;
+
+			function startQuiz(){
+				currentQuestionIndex = 0;
+				score = 0;
+				nextButton.innerHTML = "Dalej";
+				showQuestion ();
+			}
+
+			function showQuestion(){
+				resetState()
+				let currentQuestion = questions[currentQuestionIndex];
+				let questionNo = currentQuestionIndex + 1;
+				questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+				currentQuestion.answers.forEach(answer => {
+					const button = document.createElement("button");
+					button.innerHTML = answer.text;
+					button.classList.add("btn");
+					answerButtons.appendChild(button);
+					if(answer.correct){
+						button.dataset.correct = answer.correct;
+					}
+					button.addEventListener("click", selectAnswer);
+				});
+			}
+
+			function resetState(){
+				nextButton.style.display = "none";
+				while(answerButtons.firstChild){
+					answerButtons.removeChild(answerButtons.firstChild);
+				}
+			}
+
+			function selectAnswer(e){
+				const selectedBtn = e.target;
+				const isCorrect = selectedBtn.dataset.correct === "true";
+				if(isCorrect){
+					selectedBtn.classList.add("correct");
+					score++;
+				}else{
+					selectedBtn.classList.add("incorrect");
+				}
+				Array.from(answerButtons.children).forEach(button => {
+					if(button.dataset.correct === "true"){
+						button.classList.add("correct");
+					}
+					button.disabled = true;
+				});
+				nextButton.style.display = "block";
+			}
+
+			function showScore(){
+				resetState();
+				questionElement.innerHTML = `Twój wynik to ${score} na ${questions.length}!`;
+				nextButton.innerHTML = "Zagraj Ponownie";
+				nextButton.style.display = "block";
+			}
+
+			function handleNextButton(){
+				currentQuestionIndex++;
+				if(currentQuestionIndex < questions.length){
+					showQuestion();
+				}else{
+					showScore();
+				}
+			}
+
+			nextButton.addEventListener("click", ()=>{
+				if(currentQuestionIndex < questions.length){
+					handleNextButton();
+				}else{
+					startQuiz();
+				}
+			});
+
+			startQuiz();
+		</script>
 	</section>
-	<!--SKRYPT DO OTWIERANIA "WIĘCEJ"-->
-	<script>
- 	document.querySelectorAll('.show-text-btn').forEach(button => {
-    	button.addEventListener('click', () => {
-        const container = button.closest('div'); // блок, що містить текст
-        const text = container.querySelector('.slide-text');
-
-        if (!text || !container) return;
-
-        const isVisible = text.classList.contains('visible');
-
-        if (isVisible) {
-            text.classList.remove('visible');
-            text.classList.add('hidden');
-            container.classList.remove('slide-up');
-        } else {
-            text.classList.remove('hidden');
-            text.classList.add('visible');
-            container.classList.add('slide-up');
-        }
-    });
-});
-</script>
-
-
 	<!---------- STOPKA ---------->
 	
     

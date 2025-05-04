@@ -99,3 +99,30 @@ h2, .teko-headings {
       top: 50% !important;
     }
   }
+
+.btn { /*zdefiniowane zarówno za pomoca tailwinda jak i style.css, ponieważ nie działało :) */
+    background: #fff;
+    color: oklch(44.6% 0.03 256.802);
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid oklch(44.6% 0.03 256.802);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: oklch(44.6% 0.03 256.802);
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+.correct{
+    background: oklch(72.3% 0.219 149.579);
+}
+.incorrect{
+    background: oklch(63.7% 0.237 25.331);
+}
