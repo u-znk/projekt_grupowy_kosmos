@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="../style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <style type="text/css">
+        #parallax-bg {
+            transform: translateZ(0); /* lub w JS dodaj jako fallback */
+        }
+    </style>
     <style type="text/tailwindcss">
         /*tabela*/
         .tab-item.active {
@@ -156,7 +160,7 @@
 
 <body class="bg-black bg-gradient-to-b from-transparent to-black" style="background-image: url('bg-tile.jpg');">
     <!---------- NAVIGATION ---------->
-    <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full">
+    <nav class="bg-black text-white px-6 py-4 sticky top-0 z-50 w-full h-16">
         <div class="flex items-center justify-between w-full max-w-7xl mx-auto">
     
             <!-- Lewa strona: Logo -->
@@ -253,12 +257,67 @@
     </script>
 
     <!---------- HEADER ------------->
-    <section class="relative  bg-cover bg-top bg-no-repeat bg-scroll text-white flex flex-col justify-center text-center h-screen sm:h-screen lg:h-auto" style="background-image: url('header_os-tech_2.webp');">
-        <div id="header" class="relative w-full flex items-center justify-center text-center px-4 lg:h-screen h-3/6">
-            <h1 id="nazwa" class="text-4xl md:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Osiągnięcia <br>technologiczne</h1>
+    
+    <section class="relative h-screen lg:h-auto overflow-hidden text-white ">
+    <!-- TŁO PARALLAX -->
+    <div id="parallax-bg" class="absolute -top-[10px] left-0 w-full h-[calc(100%+10px)] z-0 bg-top bg-cover bg-no-repeat bg-black"
+     style="background-image: url('header_os-tech_2.webp'); will-change: transform;"></div>
+
+    <!-- TREŚĆ SEKCJI -->
+    <div class="relative z-10 flex flex-col justify-center text-center h-full pb-[150px]">
+        <!-- Nagłówek -->
+        <div id="header" class="w-full flex items-center justify-center text-center px-4 h-3/6 lg:h-screen">
+            <h1 id="nazwa" class="text-4xl md:text-7xl lg:text-8xl break-words" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">Osiągnięcia<br>technologiczne</h1>
         </div>
-        <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black transition-all duration-500 ease-in-out pointer-events-none z-0"></div>
-    </section>
+    </div>
+    
+
+    <!-- Gradient na dole -->
+    <div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-b from-transparent to-black pointer-events-none z-0"></div>
+    <script>
+    const parallax = document.getElementById('parallax-bg');
+
+
+const img = new Image();
+img.src = 'header_os-tech_2.webp';
+
+img.onload = () => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function getMaxShift() {
+        // Zmienna maxShift w zależności od szerokości okna
+        if (window.innerWidth >= 1024) { // Duże ekrany (np. desktop)
+            return 110;  // Większy przesuw na dużych ekranach
+        } else if (window.innerWidth >= 768) { // Średnie ekrany (np. tablet)
+            return 80;  // Średni przesuw na tabletach
+        } else { // Małe ekrany (np. telefony)
+            return 60;  // Mniejszy przesuw na telefonach
+        }
+    }
+
+    function updateParallax() {
+        // Efekt paralaksy tła
+        const offset = lastScrollY * 0.3;
+        parallax.style.transform = `translate3d(0, ${offset}px, 0)`;
+
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
+
+    // Uruchom od razu
+    updateParallax();
+};
+</script>
+</section>
     <div class="h-[100px] bg-gradient-to-t from-transparent to-black"></div>
 
     <!--------------TREŚĆ------------>
@@ -750,22 +809,29 @@
 
 <div class="h-[50px] md:h-[100px] bg-gradient-to-b from-transparent to-black to-70%"></div>
     <!---------- STOPKA ---------->
-    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 py-4 overflow-hidden" style="background-image: url('../moon.jpg');">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-14">
-          <h2 class="py-6 text-4xl" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Informacje dodatkowe</h2>
-          <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Autorki:</p>
-      
-          <div class="flex flex-col md:flex-row px-6 w-full">
-              <ul class="py-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">
-                  <li>Aleksandra Gwóźdź</li>
-                  <li>Urszula Ziarnek</li>
-                  <li>Paulina Ziółkowska</li>
-                  <li>Sasha Yablonska</li>
-              </ul>
-          </div>
-      </div>
-          <!-- Link do źródeł absolutnie w prawym dolnym rogu -->
-          <a href="../zrodla.html" target="_blank" class="text-sm underline absolute bottom-4 right-6">Zobacz źródła</a>
+    <footer id="info" class="relative text-white bg-cover bg-top min-h-[200px] px-6 pt-6 overflow-hidden" style="background-image: url('../moon.jpg');">
+        <h2 class="py-6 text-4xl" data-aos="fade-up" data-aos-delay="0" data-aos-duration="300" data-aos-anchor-placement="top-bottom">Informacje dodatkowe</h2>
+        <div class="w-full  flex ml-8 pt-8">
+            <div class="text-lg overflow-hidden" data-aos="fade-top" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom">
+                <div class="pl-8 pr-12 py-4 bg-black bg-opacity-75 border-2 border-white ">
+                    <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="300" data-aos-anchor-placement="top-bottom"><b>Autorki:</b></p>
+                    <div class="flex flex-col md:flex-row px-6 w-full text-sm">
+                        <ul class="py-4" data-aos="fade-left" data-aos-delay="300" data-aos-duration="300" data-aos-anchor-placement="top-bottom">
+                            <li>Aleksandra Gwóźdź</li>
+                            <li>Urszula Ziarnek</li>
+                            <li>Paulina Ziółkowska</li>
+                            <li>Sasha Yablonska</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h-12 flex justify-between">
+                    <div class="w-1/2 border-r-4 border-white"></div>
+                    <div class="w-1/2 border-l-4 border-white"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Link do źródeł absolutnie w prawym dolnym rogu -->
+        <a href="zrodla.html" target="_blank" class="text-sm underline absolute bottom-4 right-6">Zobacz źródła</a>
     </footer>
     <script src="script-podstrona2.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
