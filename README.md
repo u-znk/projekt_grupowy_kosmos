@@ -2,7 +2,7 @@ Kognitywistyka Komunikacji I
 
 <h1 align=center>Droga do gwiazd - Edukacyjna Strona o Eksploracji Kosmosu</h1>
 
-<h4 align=center>Link do strony: [Droga do gwiazd](https://u-znk.github.io/projekt_grupowy_kosmos/)</h4>
+<h4 align=center>Link do strony: <u><a href="https://u-znk.github.io/projekt_grupowy_kosmos/">Droga do gwiazd</a></u></h4>
 
 <div align=center>༻✦༺ 　༻✧༺　༻✦༺</div>
 
@@ -38,6 +38,6 @@ Kognitywistyka Komunikacji I
 
 <b>Użyte technologie</b>
 <ul>
-<li>Efekt paralaksy: [simpleParallax](https://simpleparallax.com/)</li>
-<li>Animacje: [Animate on scroll library](https://michalsnik.github.io/aos/)</li>
+<li>Efekt paralaksy: <u><a href="https://simpleparallax.com/">simpleParallax</a></u></li>
+<li>Animacje: <u><a href="https://michalsnik.github.io/aos/">Animate on scroll library</a></u></li>
 </ul>
