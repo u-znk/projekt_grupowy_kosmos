@@ -40,4 +40,5 @@ Kognitywistyka Komunikacji I
 <ul>
 <li>Efekt paralaksy: <u><a href="https://simpleparallax.com/">simpleParallax</a></u></li>
 <li>Animacje: <u><a href="https://michalsnik.github.io/aos/">Animate on scroll library</a></u></li>
+<li><u><a href="https://tailwindcss.com/">Tailwind CSS</a></u></li>
 </ul>
