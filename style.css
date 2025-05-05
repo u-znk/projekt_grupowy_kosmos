@@ -100,7 +100,7 @@ h2, .teko-headings {
 }
 @media (max-width: 768px) {
     #galleryList li {
-        width: 90%;
+        width: 100%;
         background: none;
     }
     
